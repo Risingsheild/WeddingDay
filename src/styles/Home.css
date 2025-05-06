@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script&display=swap');
+
+iframe.square-box {
+    display: block;
+    height: 500px;
+    border: 1px solid #ccc;
+    /* optional border */
+    border-radius: 8px;
+    margin: 0 auto;
+    /* optional rounded corners */
+}
+
+iframe.square-box {
+    width: 120%;
+    aspect-ratio: 1 / 1;
+    border: 1px solid #ccc;
+}
+
+/* Center the main content using flexbox */
+.center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* Timeline card for event schedule */
+.timeline-card {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    padding: 2rem 2.5rem;
+    margin: 2rem auto;
+    max-width: 500px;
+    border: 1px solid #e5e7eb;
+    position: relative;
+    z-index: 2;
+    transition: box-shadow 0.2s;
+}
+
+.timeline-card:hover {
+    box-shadow: 0 10px 30px rgba(180, 24, 111, 0.15);
+}
+
+.timeline-card h2 {
+    text-align: center;
+    color: #b8156f;
+    margin-bottom: 1.5rem;
+}
+
+.timeline-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.timeline-list li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1.25rem;
+    font-size: 1.15rem;
+}
+
+.timeline-list li::before {
+    content: '';
+    position: absolute;
+    left: 0.5rem;
+    top: 0.5rem;
+    width: 0.75rem;
+    height: 0.75rem;
+    background: #b8156f;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px #fff;
+}
+
+.timeline-list li:last-child {
+    margin-bottom: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .timeline-card {
+        padding: 1rem 0.5rem;
+        max-width: 98vw;
+    }
+}
+
+/* Hero section (motion.div) full-page wedding style */
+.hero-wedding-bg {
+    position: relative;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(120deg, rgba(186, 104, 241, 0.95) 60%, rgba(241, 225, 236, 0.85) 100%);
+    z-index: 1;
+    box-shadow: 0 8px 32px rgba(218, 13, 126, 0.08);
+    border-radius: 0 0 2rem 2rem;
+    overflow: hidden;
+}
+
+.hero-wedding-bg h1 {
+    font-family: 'Great Vibes', 'Dancing Script', cursive;
+    font-size: 4rem;
+    color: #ebe6e9;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 8px rgba(255, 255, 255, 0.5);
+    margin-bottom: 0.5rem;
+}
+
+.hero-wedding-bg p {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    color: #7a3b69;
+    margin-bottom: 0.5rem;
+}
+
+.hero-wedding-bg .date {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.2rem;
+    color: #b084cc;
+    margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+    .hero-wedding-bg {
+        min-height: 350px;
+        padding: 1rem;
+        border-radius: 0 0 1rem 1rem;
+    }
+
+    .hero-wedding-bg h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-wedding-bg p,
+    .hero-wedding-bg .date {
+        font-size: 1.2rem;
+    }
+}
