@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script&display=swap');
+
+.wedding-countdown {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    background: rgba(240, 8, 8, 0.25);
+    backdrop-filter: blur(8px);
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    border: 1px solid #d6c6e1;
+    box-shadow: 0 8px 24px rgba(133, 16, 211, 0.1);
+    font-family: 'Dancing Script', cursive;
+    position: relative;
+    flex-wrap: wrap;
+  }
+
+  .wedding-countdown::before {
+    content: '💍❤️💍';
+    position: absolute;
+    top: -1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    animation: pulse 1.5s ease-in-out infinite;
+  }
+  
+  
+  
+  .countdown-unit {
+    background: rgba(226, 221, 221, 0.8);
+    border-radius: 1rem;
+    box-shadow: 0 2px 6px rgba(150, 130, 180, 0.2);
+    padding: 1rem;
+    width: 5rem;
+    text-align: center;
+    font-family: 'Georgia', serif;
+  }
+  
+  .countdown-value {
+    font-size: 2.75rem;
+    font-weight: bold;
+    color: #6b51b2; /* Mauve 600 */
+    font-family: 'Dancing Script', cursive;
+    position: relative;
+    flex-wrap: wrap;
+  }
+  
+  .countdown-label {
+    font-size: 1.875rem;
+    color: #555;
+    font-family: 'Dancing Script', cursive;
+    position: relative;
+    flex-wrap: wrap;
+  }
+  
+
+  @keyframes pulse {
+    0% {
+      transform: translateX(-50%) scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: translateX(-50%) scale(1.2);
+      opacity: 0.8;
+    }
+    100% {
+      transform: translateX(-50%) scale(1);
+      opacity: 1;
+    }
+  }
+  
