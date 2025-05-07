@@ -108,7 +108,7 @@ iframe.square-box {
 .hero-wedding-bg h1 {
     font-family: 'Great Vibes', 'Dancing Script', cursive;
     font-size: 4rem;
-    color: #ebe6e9;
+    color: #7a4766;
     letter-spacing: 2px;
     text-shadow: 0 2px 8px rgba(255, 255, 255, 0.5);
     margin-bottom: 0.5rem;
@@ -117,14 +117,14 @@ iframe.square-box {
 .hero-wedding-bg p {
     font-family: 'Dancing Script', cursive;
     font-size: 2rem;
-    color: #7a3b69;
+    color: #ebe1e8;
     margin-bottom: 0.5rem;
 }
 
 .hero-wedding-bg .date {
     font-family: 'Dancing Script', cursive;
     font-size: 2.2rem;
-    color: #b084cc;
+    color: #f2f1f3;
     margin-bottom: 0;
 }
 

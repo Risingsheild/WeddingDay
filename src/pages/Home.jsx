@@ -59,11 +59,9 @@ export function Home() {
           <h2>Event Schedule</h2>
           <ul className="timeline-list">
             <li>3:00 PM – Guest Arrival</li>
-            <li>3:30 PM – Ceremony Begins</li>
-            <li>4:30 PM – Cocktail Hour</li>
-            <li>6:00 PM – Dinner & Speeches</li>
-            <li>8:00 PM – Dancing</li>
-            <li>10:30 PM – Farewell</li>
+            <li>5:00 PM – Ceremony Begins</li>
+            <li>5:30 PM – Cocktail Hour</li>
+            <li>6:30 - 11:00 PM – Reception</li>
           </ul>
         </motion.div>
       </div>

@@ -26,7 +26,7 @@ export function WeddingCountdown() {
         Countdown to Our Wedding
       </h2>
       <Countdown
-        date={new Date('2026-04-25T00:00:00')}
+        date={new Date('2026-04-25T17:00:00')}
         renderer={WeddingCountdownRenderer}
       />
     </div>
