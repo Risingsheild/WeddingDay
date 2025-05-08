@@ -1,86 +1,287 @@
 /* src/styles/NavBar.css */
 
 .nav-bar {
-    background: rgba(201, 198, 198, 0.8);
-    backdrop-filter: blur(6px);
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    border-bottom: 2px solid #f5adc0;
-    box-shadow: 0 2px 10px rgba(180, 150, 180, 0.1);
-    position: relative;
-    z-index: 10;
-    font-family: 'Dancing Script', cursive;
+  background: rgba(201, 198, 198, 0.8);
+  backdrop-filter: blur(6px);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  border-bottom: 2px solid #f5adc0;
+  box-shadow: 0 2px 10px rgba(180, 150, 180, 0.1);
+  position: relative;
+  z-index: 10;
+  font-family: 'Dancing Script', cursive;
+  animation: fadeInDown 0.8s ease-out;
+}
+
+.nav-link {
+  position: relative;
+  font-size: 3rem;
+  padding: .75rem;
+  font-weight: 500;
+  color: #b8156f;
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.nav-link:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.nav-link:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.nav-link:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.nav-link:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.nav-link:hover {
+  color: #c6789b;
+  transform: scale(1.05) translateY(-2px);
+}
+
+.nav-link::after {
+  content: "❀";
+  position: absolute;
+  top: 0;
+  right: -1.2rem;
+  font-size: 1rem;
+  opacity: 0.6;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-link:hover::after {
+  transform: rotate(20deg) scale(1.1);
+  opacity: 1;
+  animation: flowerSpin 1s ease-in-out infinite;
+}
+
+/* Active link styles */
+.nav-link.active {
+  color: #e83e8c;
+  font-weight: 600;
+  transform: scale(1.05);
+}
+
+.nav-link.active::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 3px;
+  background: linear-gradient(90deg, #b8156f, #e83e8c);
+  border-radius: 2px;
+  animation: gradientFlow 2s linear infinite;
+}
+
+.nav-link.active::after {
+  opacity: 1;
+  transform: rotate(0deg) scale(1.2);
+  color: #e83e8c;
+  animation: flowerPulse 2s ease-in-out infinite;
+}
+
+/* Floating Hearts and Rings */
+.floating-decor {
+  position: fixed;
+  z-index: 1;
+  animation: float 6s ease-in-out infinite;
+  opacity: 0.5;
+  pointer-events: none;
+  font-size: 1.5rem;
+}
+
+.heart {
+  font-size: 1.5rem;
+  color: #d84c6f;
+  top: 80px;
+  left: 20px;
+  animation: float 6s ease-in-out infinite, heartBeat 1.5s ease-in-out infinite;
+}
+
+.ring {
+  font-size: 1.5rem;
+  color: #b084cc;
+  top: 120px;
+  right: 30px;
+  animation: float 6s ease-in-out infinite, ringSpin 4s linear infinite;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
   }
-  
-  .nav-link {
-    position: relative;
-    font-size: 3rem;
-    padding: .75rem;
-    font-weight: 500;
-    color: #b8156f;
-    text-decoration: none;
-    transition: all 0.3s ease-in-out;
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .nav-link:hover {
-    color: #c6789b;
-    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
   }
-  
-  .nav-link::after {
-    content: "❀";
-    position: absolute;
-    top: 0;
-    right: -1.2rem;
-    font-size: 1rem;
-    opacity: 0.6;
-    transition: transform 0.3s ease;
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .nav-link:hover::after {
-    transform: rotate(20deg) scale(1.1);
+}
+
+@keyframes flowerSpin {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  50% {
+    transform: rotate(180deg) scale(1.2);
+  }
+
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+@keyframes flowerPulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.3);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: translateY(-20px) rotate(8deg);
     opacity: 1;
   }
-  
-  /* Floating Hearts and Rings */
-  .floating-decor {
-    position: fixed;
-    z-index: 1;
-    animation: float 6s ease-in-out infinite;
+
+  100% {
+    transform: translateY(0) rotate(0deg);
     opacity: 0.5;
-    pointer-events: none;
-    font-size: 1.5rem;
   }
-  
-  .heart {
-    font-size: 1.5rem;
-    color: #d84c6f;
-    top: 80px;
-    left: 20px;
-    animation-delay: 0s;
+}
+
+@keyframes heartBeat {
+  0% {
+    transform: scale(1);
   }
-  
-  .ring {
-    font-size: 1.5rem;
-    color: #b084cc;
-    top: 120px;
-    right: 30px;
-    animation-delay: 3s;
+
+  14% {
+    transform: scale(1.3);
   }
-  
-  @keyframes float {
-    0% {
-      transform: translateY(0) rotate(0deg);
-      opacity: 0.5;
-    }
-    50% {
-      transform: translateY(-20px) rotate(8deg);
-      opacity: 1;
-    }
-    100% {
-      transform: translateY(0) rotate(0deg);
-      opacity: 0.5;
-    }
+
+  28% {
+    transform: scale(1);
   }
+
+  42% {
+    transform: scale(1.3);
+  }
+
+  70% {
+    transform: scale(1);
+  }
+}
+
+@keyframes ringSpin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Add decorative elements */
+.nav-bar::before,
+.nav-bar::after {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.nav-bar::before {
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23b8156f'%3E%3Cpath d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E");
+  animation: floatLeft 8s ease-in-out infinite;
+}
+
+.nav-bar::after {
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23b8156f'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z'/%3E%3C/svg%3E");
+  animation: floatRight 8s ease-in-out infinite;
+}
+
+@keyframes floatLeft {
+
+  0%,
+  100% {
+    transform: translateY(-50%) translateX(0);
+  }
+
+  50% {
+    transform: translateY(-50%) translateX(-10px);
+  }
+}
+
+@keyframes floatRight {
+
+  0%,
+  100% {
+    transform: translateY(-50%) translateX(0);
+  }
+
+  50% {
+    transform: translateY(-50%) translateX(10px);
+  }
+}
