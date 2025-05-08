@@ -8,7 +8,7 @@ export function PageWrapper({ children }) {
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: -100 }}
       transition={{ duration: 0.5 }}
-      className="p-6 max-w-4xl mx-auto"
+      className="p-4 max-w-7xl mx-auto"
     >
       {children}
     </motion.div>

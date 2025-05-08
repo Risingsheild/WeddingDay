@@ -2,98 +2,27 @@
 
 iframe.square-box {
     display: block;
-    height: 500px;
+    height: 400px;
     border: 1px solid #ccc;
-    /* optional border */
     border-radius: 8px;
-    margin: 0 auto;
-    /* optional rounded corners */
+    width: 100%;
 }
 
-iframe.square-box {
-    width: 120%;
-    aspect-ratio: 1 / 1;
-    border: 1px solid #ccc;
-}
-
-/* Center the main content using flexbox */
+/* Center the main content using grid */
 .center-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
     width: 100%;
+    padding: 1rem;
 }
 
-/* Timeline card for event schedule */
-.timeline-card {
-    background: rgba(255, 255, 255, 0.85);
-    border-radius: 1.5rem;
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
-    padding: 2rem 2.5rem;
-    margin: 2rem auto;
-    max-width: 500px;
-    border: 1px solid #e5e7eb;
-    position: relative;
-    z-index: 2;
-    transition: box-shadow 0.2s;
-}
-
-.timeline-card:hover {
-    box-shadow: 0 10px 30px rgba(180, 24, 111, 0.15);
-}
-
-.timeline-card h2 {
-    text-align: center;
-    color: #b8156f;
-    margin-bottom: 1.5rem;
-}
-
-.timeline-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.timeline-list li {
-    position: relative;
-    padding-left: 2rem;
-    margin-bottom: 1.25rem;
-    font-size: 1.15rem;
-}
-
-.timeline-list li::before {
-    content: '';
-    position: absolute;
-    left: 0.5rem;
-    top: 0.5rem;
-    width: 0.75rem;
-    height: 0.75rem;
-    background: #b8156f;
-    border-radius: 50%;
-    box-shadow: 0 0 0 2px #fff;
-}
-
-.timeline-list li:last-child {
-    margin-bottom: 0;
-}
-
-/* Responsive adjustments */
-@media (max-width: 600px) {
-    .timeline-card {
-        padding: 1rem 0.5rem;
-        max-width: 98vw;
-    }
-}
-
-/* Hero section (motion.div) full-page wedding style */
+/* Hero section styles */
 .hero-wedding-bg {
+    grid-column: 1 / -1;
     position: relative;
-    inset: 0;
     width: 100%;
-    height: 100%;
-    min-height: 10vh;
+    min-height: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -101,17 +30,33 @@ iframe.square-box {
     background: linear-gradient(120deg, rgba(186, 104, 241, 0.95) 60%, rgba(241, 225, 236, 0.85) 100%);
     z-index: 1;
     box-shadow: 0 8px 32px rgba(218, 13, 126, 0.08);
-    border-radius: 0 0 2rem 2rem;
+    border-radius: 1rem;
     overflow: hidden;
+    padding: 2rem;
 }
 
 .hero-wedding-bg h1 {
     font-family: 'Great Vibes', 'Dancing Script', cursive;
-    font-size: 4rem;
+    font-size: 5.5rem;
     color: #7a4766;
-    letter-spacing: 2px;
-    text-shadow: 0 2px 8px rgba(255, 255, 255, 0.5);
-    margin-bottom: 0.5rem;
+    letter-spacing: 3px;
+    text-shadow: 4px 4px 12px rgba(255, 255, 255, 0.8),
+        0 0 30px rgba(184, 21, 111, 0.4),
+        0 0 40px rgba(184, 21, 111, 0.2);
+    margin-bottom: 1rem;
+    animation: gentleFloat 3s ease-in-out infinite;
+}
+
+@keyframes gentleFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 .hero-wedding-bg p {
@@ -128,19 +73,285 @@ iframe.square-box {
     margin-bottom: 0;
 }
 
-@media (max-width: 600px) {
+/* Countdown section - keeping original styling */
+.flex.flex-col.items-center.mb-6 {
+    grid-column: 1 / -1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+/* Timeline card */
+.timeline-card {
+    grid-column: 1 / -1;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    padding: 2.5rem;
+    margin: 0 auto;
+    max-width: 800px;
+    border: 1px solid rgba(184, 21, 111, 0.1);
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.timeline-card h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5rem;
+    color: #b8156f;
+    margin-bottom: 2rem;
+    text-shadow: 3px 3px 6px rgba(5, 5, 5, 0.3);
+}
+
+.timeline-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.timeline-list li {
+    position: relative;
+    padding: 1rem 1.5rem;
+    font-size: 1.2rem;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 0.5rem;
+    border: 1px solid rgba(184, 21, 111, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.timeline-list li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(184, 21, 111, 0.25), 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.85);
+}
+
+.timeline-list li::before {
+    content: '💕';
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+/* Location section */
+.location-section {
+    grid-column: 1 / -1;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.location-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.location-info {
+    padding-right: 2rem;
+}
+
+.location-info h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5rem;
+    color: #b8156f;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.location-info p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #4a5568;
+}
+
+.hotels-list {
+    margin-top: 2rem;
+}
+
+.hotels-list h3 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5rem;
+    color: #b8156f;
+    margin-bottom: 1rem;
+    text-shadow: 3px 3px 6px rgba(5, 5, 5, 0.3);
+}
+
+.hotels-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.hotels-list li {
+    background-color: rgba(221, 9, 125, 0.267);
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+}
+
+.hotels-list li:hover {
+    background-color: rgba(184, 21, 111, 0.1);
+}
+
+.hotels-list li a {
+    text-align: center;
+    display: block;
+    color: #b8156f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Directions link */
+.directions-link {
+    display: inline-block;
+    margin-left: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #b8156f;
+    color: white;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+
+.directions-link:hover {
+    background-color: #e83e8c;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .location-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .location-info {
+        padding-right: 0;
+    }
+
+    iframe.square-box {
+        height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .center-content {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+
     .hero-wedding-bg {
-        min-height: 350px;
+        min-height: 250px;
         padding: 1rem;
-        border-radius: 0 0 1rem 1rem;
     }
 
     .hero-wedding-bg h1 {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
     }
 
     .hero-wedding-bg p,
     .hero-wedding-bg .date {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
+
+    .timeline-card,
+    .location-section {
+        padding: 1.5rem;
+    }
+
+    .timeline-card h2,
+    .location-info h2 {
+        font-size: 2rem;
+    }
+
+    .timeline-list li,
+    .hotels-list a {
+        font-size: 1rem;
+    }
+
+    iframe.square-box {
+        height: 300px;
+    }
+}
+
+.location-section h2 {
+    text-align: center;
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    color: #b8156f;
+    margin-bottom: 1.5rem;
+    text-shadow: 3px 3px 6px rgba(5, 5, 5, 0.3);
+}
+
+.location-section p {
+    text-align: center;
+    font-weight: bold;
+}
+
+.hotels-list h3 {
+    text-align: center;
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5rem;
+    color: #b8156f;
+    margin-bottom: 1rem;
+    text-shadow: 3px 3px 6px rgba(5, 5, 5, 0.3);
+}
+
+.hotels-list ul {
+    text-align: center;
+}
+
+.hotels-list li {
+    background-color: rgba(221, 9, 125, 0.267);
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+}
+
+.hotels-list li:hover {
+    background-color: rgba(184, 21, 111, 0.1);
+}
+
+.hotels-list li a {
+    text-align: center;
+    display: block;
+    color: #b8156f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.valet-note {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: #f8f8f8;
+    border-radius: 4px;
+    text-align: center;
+    border: 2px solid #b8156f;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.valet-note p {
+    font-size: 1.3rem;
+    color: #333;
+    font-weight: 600;
+    margin: 0;
+    font-family: Arial, sans-serif;
 }

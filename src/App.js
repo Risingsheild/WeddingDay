@@ -4,6 +4,7 @@ import { Home } from './pages/Home';
 import { Gallery } from './pages/Gallery';
 import { RSVP } from './pages/RSVP';
 import { HowWeMet } from './pages/HowWeMet';
+import { Location } from './pages/Location';
 import { PageTransition } from './components/PageTransition';
 import { FloatingDecorations } from './components/FloatingDecorations';
 
@@ -22,6 +23,12 @@ function NavLinks() {
         className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}
       >
         Home
+      </Link>
+      <Link
+        to="/location"
+        className={`nav-link ${location.pathname === '/location' ? 'active' : ''}`}
+      >
+        Location
       </Link>
       <Link
         to="/gallery"
@@ -58,6 +65,7 @@ function AppContent() {
           <PageTransition>
             <Routes location={location} key={location.pathname}>
               <Route path="/" element={<Home />} />
+              <Route path="/location" element={<Location />} />
               <Route path="/gallery" element={<Gallery />} />
               <Route path="/rsvp" element={<RSVP />} />
               <Route path="/how-we-met" element={<HowWeMet />} />
