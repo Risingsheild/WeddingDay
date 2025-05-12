@@ -1,94 +1,99 @@
 /* src/styles/NavBar.css */
 
 .nav-bar {
-  background: rgba(201, 198, 198, 0.8);
-  backdrop-filter: blur(6px);
-  padding: 1rem 2rem;
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 2rem;
-  border-bottom: 2px solid #f5adc0;
-  box-shadow: 0 2px 10px rgba(180, 150, 180, 0.1);
+  background: linear-gradient(90deg, #f7e3ef 0%, #e6b7d6 100%);
+  border-radius: 2rem;
+  box-shadow: 0 8px 32px rgba(184, 21, 111, 0.10), 0 2px 8px rgba(0, 0, 0, 0.06);
+  padding: 1rem 2rem;
+  margin: 2rem auto 1.5rem auto;
+  max-width: 900px;
   position: relative;
   z-index: 10;
-  font-family: 'Dancing Script', cursive;
-  animation: fadeInDown 0.8s ease-out;
+  border: 2px solid #e6b7d6;
+  overflow: visible;
 }
 
 .nav-link {
-  position: relative;
-  font-size: 3rem;
-  padding: .75rem;
-  font-weight: 500;
-  color: #b8156f;
   text-decoration: none;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  opacity: 0;
-  animation: fadeIn 0.5s ease-out forwards;
+  color: #b8156f;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 1.5rem;
+  background: rgba(255, 255, 255, 0.5);
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(184, 21, 111, 0.05);
+  border: 1px solid transparent;
 }
 
-.nav-link:nth-child(1) {
-  animation-delay: 0.1s;
-}
-
-.nav-link:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.nav-link:nth-child(3) {
-  animation-delay: 0.3s;
-}
-
-.nav-link:nth-child(4) {
-  animation-delay: 0.4s;
-}
-
+.nav-link.active,
 .nav-link:hover {
-  color: #c6789b;
-  transform: scale(1.05) translateY(-2px);
+  background: #f7e3ef;
+  color: #7a4766;
+  border: 1px solid #b8156f;
+  box-shadow: 0 4px 16px rgba(184, 21, 111, 0.10);
 }
 
-.nav-link::after {
-  content: "❀";
-  position: absolute;
-  top: 0;
-  right: -1.2rem;
-  font-size: 1rem;
-  opacity: 0.6;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  z-index: 20;
 }
 
-.nav-link:hover::after {
-  transform: rotate(20deg) scale(1.1);
-  opacity: 1;
-  animation: flowerSpin 1s ease-in-out infinite;
-}
-
-/* Active link styles */
-.nav-link.active {
-  color: #e83e8c;
-  font-weight: 600;
-  transform: scale(1.05);
-}
-
-.nav-link.active::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80%;
-  height: 3px;
-  background: linear-gradient(90deg, #b8156f, #e83e8c);
+.hamburger span {
+  width: 28px;
+  height: 4px;
+  background: #b8156f;
+  margin: 4px 0;
   border-radius: 2px;
-  animation: gradientFlow 2s linear infinite;
+  transition: 0.3s;
 }
 
-.nav-link.active::after {
-  opacity: 1;
-  transform: rotate(0deg) scale(1.2);
-  color: #e83e8c;
-  animation: flowerPulse 2s ease-in-out infinite;
+@media (max-width: 900px) {
+  .nav-bar {
+    max-width: 98vw;
+    padding: 1rem 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    background: linear-gradient(90deg, #f7e3ef 0%, #e6b7d6 100%);
+    border-radius: 0 0 2rem 2rem;
+    box-shadow: 0 8px 32px rgba(184, 21, 111, 0.10), 0 2px 8px rgba(0, 0, 0, 0.06);
+    margin: 0 auto 1.5rem auto;
+    width: 100vw;
+    max-width: 100vw;
+    padding: 0;
+  }
+
+  .nav-links {
+    border-radius: 0 0 2rem 2rem;
+    box-shadow: 0 8px 32px rgba(184, 21, 111, 0.10), 0 2px 8px rgba(0, 0, 0, 0.06);
+    background: linear-gradient(90deg, #f7e3ef 0%, #e6b7d6 100%);
+    border-top: 1px solid #e6b7d6;
+  }
+
+  .hamburger {
+    display: flex;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+  }
 }
 
 /* Floating Hearts and Rings */
@@ -233,33 +238,32 @@
   }
 }
 
-/* Add decorative elements */
-.nav-bar::before,
+/* Decorative Heart (left) */
+.nav-bar::before {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 36s-9.6-8.4-13.6-12.4C2.4 20.4 2.4 15.2 6 12c3.6-3.2 8.8-2.4 12 1.6C27.2 9.6 32.4 8.8 36 12c3.6 3.2 3.6 8.4-.4 12.4C29.6 27.6 20 36 20 36z' fill='%23d84c6f' fill-opacity='0.18'/%3E%3C/svg%3E") no-repeat center/contain;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Decorative Ring (right) */
 .nav-bar::after {
   content: '';
   position: absolute;
-  width: 100px;
-  height: 100px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  opacity: 0.1;
+  right: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cellipse cx='20' cy='24' rx='12' ry='12' fill='%23b084cc' fill-opacity='0.13'/%3E%3Crect x='13' y='7' width='14' height='6' rx='3' fill='%23b084cc' fill-opacity='0.18' transform='rotate(-20 13 7)'/%3E%3C/svg%3E") no-repeat center/contain;
   pointer-events: none;
-}
-
-.nav-bar::before {
-  left: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23b8156f'%3E%3Cpath d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E");
-  animation: floatLeft 8s ease-in-out infinite;
-}
-
-.nav-bar::after {
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23b8156f'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z'/%3E%3C/svg%3E");
-  animation: floatRight 8s ease-in-out infinite;
+  z-index: 1;
 }
 
 @keyframes floatLeft {

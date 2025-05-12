@@ -22,8 +22,8 @@ const WeddingCountdownRenderer = ({ days, hours, minutes, seconds }) => {
 export function WeddingCountdown() {
   return (
     <div className="flex flex-col items-center mb-6">
-      <h2 className="text-3xl font-semibold text-mauve-800 mb-4">
-        Countdown to Our Wedding
+      <h2 className="countdown-heading">
+        Until We Say 'I Do'
       </h2>
       <Countdown
         date={new Date('2026-04-25T17:00:00')}
