@@ -437,3 +437,86 @@ body {
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
+
+.wedding-countdown {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.7rem;
+    background: linear-gradient(120deg, #fff6fa 60%, #e6b7d6 100%);
+    backdrop-filter: blur(8px);
+    padding: 1.2rem 1.5rem;
+    border-radius: 1.5rem;
+    border: 2px double #b8156f;
+    box-shadow:
+        0 8px 24px 0 rgba(184, 21, 111, 0.18),
+        0 2px 8px 0 rgba(0, 0, 0, 0.12);
+    font-family: 'Dancing Script', cursive;
+    position: relative;
+    flex-wrap: wrap;
+    margin: 2rem auto;
+    max-width: 700px;
+    animation: popIn 1.2s cubic-bezier(.68, -0.55, .27, 1.55);
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+
+    80% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.wedding-countdown::before {
+    content: '💍❤️💍';
+    position: absolute;
+    top: -2.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.5rem;
+    animation: pulse 1.5s ease-in-out infinite;
+    filter: drop-shadow(0 2px 6px #b8156f33);
+}
+
+.countdown-unit {
+    background: rgba(197, 197, 197, 0.363);
+    border-radius: 1.4rem;
+    box-shadow: 0 2px 8px rgba(184, 21, 111, 0.10);
+    padding: 0.9rem 1.5rem;
+    width: 5.5rem;
+    text-align: center;
+    font-family: 'Georgia', serif;
+    border: 2px solid #e6b7d6;
+    margin: 0;
+    transition: transform 0.2s;
+}
+
+.countdown-unit:hover {
+    transform: scale(1.07);
+    box-shadow: 0 8px 24px rgba(77, 9, 46, 0.247);
+}
+
+.countdown-value {
+    font-size: 3.2rem;
+    font-weight: bold;
+    color: #a82775e7;
+    font-family: 'Satisfy', cursive;
+    text-shadow: 0 2px 8px #e6b7d6, 0 1px 2px #808080;
+}
+
+.countdown-label {
+    font-size: 2rem;
+    color: #000000;
+    font-family: 'Dancing Script', cursive;
+    margin-top: 0.3rem;
+    letter-spacing: 1px;
+}
