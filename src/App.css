@@ -1,3 +1,8 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
 /* AppBackground.css */
 
 .app-background {
@@ -29,4 +34,23 @@
   color: #000000;
   /* Darker text for readability */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .app-background {
+    background-size: 70% auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-background {
+    background-size: 90% auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-background {
+    background-size: 100% auto;
+  }
 }

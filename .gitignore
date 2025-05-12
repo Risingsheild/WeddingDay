@@ -22,8 +22,10 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Media files
-/src/images/*
+# Media files - only ignore specific sensitive images
+/src/images/private/*
+/src/images/sensitive/*
+*.avif
 *.jpg
 *.jpeg
 *.png
@@ -35,3 +37,12 @@ yarn-error.log*
 *.mov
 *.avi
 *.wmv
+
+# Allow public images to be tracked
+!/public/images/
+!/public/images/*.jpg
+!/public/images/*.jpeg
+!/public/images/*.png
+!/public/images/*.gif
+!/public/images/*.svg
+!/public/images/*.webp

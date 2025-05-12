@@ -19,20 +19,50 @@ iframe.square-box {
 
 /* Hero section styles */
 .hero-wedding-bg {
-    grid-column: 1 / -1;
-    position: relative;
-    width: 100%;
-    min-height: 300px;
+    width: 99vw;
+    min-height: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background: linear-gradient(120deg, rgba(186, 104, 241, 0.95) 60%, rgba(241, 225, 236, 0.85) 100%);
     z-index: 1;
-    box-shadow: 0 8px 32px rgba(218, 13, 126, 0.08);
-    border-radius: 1rem;
+    padding: 2.5rem 0 3.5rem 0;
+    position: relative;
+    text-align: center;
     overflow: hidden;
-    padding: 2rem;
+    border-radius: 4rem;
+    box-shadow:
+        0 24px 64px 0 rgba(184, 21, 111, 0.25),
+        /* pink glow, more spread */
+        0 8px 32px 0 rgba(0, 0, 0, 0.18);
+    /* deeper black shadow */
+    margin-left: -4%;
+
+    transform: translateX(-50%);
+}
+
+.hero-wedding-bg::before,
+.hero-wedding-bg::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-repeat: repeat-x;
+    background-size: contain;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.hero-wedding-bg::before {
+    top: 0;
+    background-image: url('data:image/svg+xml;utf8,<svg width="400" height="60" viewBox="0 0 400 60" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 50 Q50 10 100 40 T200 30 T300 50 T400 20" stroke="%2396c7a6" stroke-width="4" fill="none"/><ellipse cx="60" cy="35" rx="10" ry="7" fill="%23f7e3ef"/><ellipse cx="65" cy="35" rx="6" ry="4" fill="%23e6b7d6"/><ellipse cx="120" cy="20" rx="8" ry="6" fill="%23f7e3ef"/><ellipse cx="125" cy="20" rx="4" ry="2" fill="%23e6b7d6"/><ellipse cx="200" cy="40" rx="12" ry="8" fill="%23f7e3ef"/><ellipse cx="205" cy="40" rx="6" ry="4" fill="%23e6b7d6"/><ellipse cx="320" cy="30" rx="10" ry="7" fill="%23f7e3ef"/><ellipse cx="325" cy="30" rx="5" ry="3" fill="%23e6b7d6"/><ellipse cx="350" cy="25" rx="8" ry="6" fill="%23f7e3ef"/><ellipse cx="355" cy="25" rx="4" ry="2" fill="%23e6b7d6"/><ellipse cx="90" cy="30" rx="4" ry="2" fill="%2396c7a6"/><ellipse cx="250" cy="35" rx="5" ry="3" fill="%2396c7a6"/></svg>');
+}
+
+.hero-wedding-bg::after {
+    bottom: 0;
+    background-image: url('data:image/svg+xml;utf8,<svg width="400" height="60" viewBox="0 0 400 60" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 10 Q50 50 100 20 T200 30 T300 10 T400 40" stroke="%2396c7a6" stroke-width="4" fill="none"/><ellipse cx="80" cy="25" rx="10" ry="7" fill="%23f7e3ef"/><ellipse cx="85" cy="25" rx="6" ry="4" fill="%23e6b7d6"/><ellipse cx="180" cy="40" rx="8" ry="6" fill="%23f7e3ef"/><ellipse cx="185" cy="40" rx="4" ry="2" fill="%23e6b7d6"/><ellipse cx="220" cy="20" rx="12" ry="8" fill="%23f7e3ef"/><ellipse cx="225" cy="20" rx="6" ry="4" fill="%23e6b7d6"/><ellipse cx="340" cy="35" rx="10" ry="7" fill="%23f7e3ef"/><ellipse cx="345" cy="35" rx="5" ry="3" fill="%23e6b7d6"/><ellipse cx="370" cy="45" rx="8" ry="6" fill="%23f7e3ef"/><ellipse cx="375" cy="45" rx="4" ry="2" fill="%23e6b7d6"/><ellipse cx="110" cy="40" rx="4" ry="2" fill="%2396c7a6"/><ellipse cx="270" cy="25" rx="5" ry="3" fill="%2396c7a6"/></svg>');
 }
 
 .hero-wedding-bg h1 {
@@ -45,6 +75,7 @@ iframe.square-box {
         0 0 40px rgba(184, 21, 111, 0.2);
     margin-bottom: 1rem;
     animation: gentleFloat 3s ease-in-out infinite;
+    text-align: center;
 }
 
 @keyframes gentleFloat {
@@ -258,12 +289,11 @@ iframe.square-box {
     }
 
     .hero-wedding-bg {
-        min-height: 250px;
-        padding: 1rem;
+        padding: 2rem 1rem;
     }
 
     .hero-wedding-bg h1 {
-        font-size: 2.5rem;
+        font-size: 4rem;
     }
 
     .hero-wedding-bg p,
@@ -288,6 +318,16 @@ iframe.square-box {
 
     iframe.square-box {
         height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-wedding-bg {
+        padding: 1.5rem 1rem;
+    }
+
+    .hero-wedding-bg h1 {
+        font-size: 3rem;
     }
 }
 

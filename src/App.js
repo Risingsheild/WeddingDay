@@ -11,7 +11,6 @@ import { FloatingDecorations } from './components/FloatingDecorations';
 import './App.css';
 import './styles/Navbar.css';
 import './styles/WeddingCountdown.css';
-import background from './images/Wedding-background.avif';
 
 function NavLinks() {
   const location = useLocation();
@@ -56,7 +55,7 @@ function AppContent() {
   const location = useLocation();
 
   return (
-    <div className="app-background" style={{ backgroundImage: `url(${background})` }}>
+    <div className="app-background" style={{ backgroundImage: `url(/images/Wedding-background.avif)` }}>
       <div className="overlay"></div>
       <FloatingDecorations />
       <div className="app-content">
