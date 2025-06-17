@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { PageWrapper } from '../components/PageWrapper';
 import '../styles/Home.css';
 
+
 export function Location() {
     return (
         <PageWrapper>
@@ -18,6 +19,8 @@ export function Location() {
                             <h2 className="text-2xl font-semibold mb-2">Location</h2>
                             <p className="mb-4">
                                 Willows Lodge, 14580 NE 145th St, Woodinville, WA 98072
+                                <br />
+                                <br />
                                 <a
                                     href="https://maps.google.com/?q=Willows+Lodge,+14580+NE+145th+St,+Woodinville,+WA+98072"
                                     target="_blank"
@@ -33,16 +36,19 @@ export function Location() {
                                     <li>
                                         <a href="https://www.willowslodge.com/" target="_blank" rel="noopener noreferrer">
                                             Willows Lodge
+                                            <p>*please contact us for more details** as we have a group rate for the night of the wedding</p>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://www.marriott.com/en-us/hotels/seawm-woodinville-marriott/" target="_blank" rel="noopener noreferrer">
-                                            Woodinville Marriott
+                                        <a href="https://www.choicehotels.com/washington/kirkland/quality-inn-hotels/wa160?gal=undefined&gmp=MetaOrganic&gpa=GPADSAPR2&hmGUID=70319ed5-4fc1-42a7-b465-3e821f4fdb48&mc=HAGOHPUS&meta=PMFGPADUSSAPR2_WA160_mapresults_US_1_desktop_2025-06-26_selected___organic&pmf=hpagoogle&product=mapresults&adults=2&checkInDate=2025-06-26&checkOutDate=2025-06-27&ratePlanCode=SAPR2" target="_blank" rel="noopener noreferrer">
+                                            Quality Inn & Suites
+                                            <p>est. $150/night and about 10 minutes away</p>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://www.hamptoninn.com" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://www.hilton.com/en/book/reservation/rooms/?ctyhocn=SEAWOHX&arrivalDate=2025-06-26&departureDate=2025-06-27&room1NumAdults=2&inputModule=HOTEL_SEARCH&viewPackagesAndPromotionsRate=true&WT.mc_id=zLADA0WW1XX2OLX3DA4MS5MS6_SEAWOHX7_298227037_&adType=FL&dsclid=70785210680356864&dclid=CM-Fv4-g-Y0DFS0TdgYdvYolZQ&hmGUID=bf119760-73b2-4997-bb5a-6345a5a3fd14" target="_blank" rel="noopener noreferrer">
                                             Hampton Inn & Suites
+                                            <p>est. $250/night and about 10 minutes away</p>
                                         </a>
                                     </li>
                                 </ul>
@@ -51,7 +57,7 @@ export function Location() {
                         <div className="map-container">
                             <iframe
                                 title="Willows Lodge Map"
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2686.832026160589!2d-122.14963072386042!3d47.737876884170065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54900e370b63a90b%3A0x15a5945148ac38d5!2sWillows+Lodge!5e0!3m2!1sen!2sus!4v1714921840000!5m2!1sen!2sus"
+                                src="/images/luxury_hotels_in_woodinville.2000x0.webp"
                                 className="square-box"
                                 loading="lazy"
                                 referrerPolicy="no-referrer-when-downgrade"
