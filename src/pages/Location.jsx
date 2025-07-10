@@ -55,13 +55,12 @@ export function Location() {
                             </div>
                         </div>
                         <div className="map-container">
-                            <iframe
-                                title="Willows Lodge Map"
-                                src="/images/luxury_hotels_in_woodinville.2000x0.webp"
+                            <img
+                                src="/images/assets_task_01jzv9avt9fkar2sxkqj23e0st_1752188870_img_0.webp"
+                                alt="Willows Lodge"
                                 className="square-box"
                                 loading="lazy"
-                                referrerPolicy="no-referrer-when-downgrade"
-                            ></iframe>
+                            />
                         </div>
                     </div>
                     <div className="valet-note">

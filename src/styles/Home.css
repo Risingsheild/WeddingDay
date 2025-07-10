@@ -304,6 +304,16 @@ iframe.square-box {
     border-radius: 1rem;
 }
 
+img.square-box {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    object-fit: cover;
+    border: none;
+    border-radius: 1rem;
+}
+
 .valet-note {
     margin-top: 2rem;
     text-align: center;
