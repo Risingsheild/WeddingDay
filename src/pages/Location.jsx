@@ -36,7 +36,7 @@ export function Location() {
                                     <li>
                                         <a href="https://www.willowslodge.com/" target="_blank" rel="noopener noreferrer">
                                             Willows Lodge
-                                            <p>*please contact us for more details** as we have a group rate for the night of the wedding</p>
+                                            <p>*please contact us for more details** as we have a group rate for the night of the wedding, we also have link for 10% off the room rate</p>
                                         </a>
                                     </li>
                                     <li>
