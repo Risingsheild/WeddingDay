@@ -55,7 +55,7 @@ function AppContent() {
   const location = useLocation();
 
   return (
-    <div className="app-background" style={{ backgroundImage: `url(/images/Wedding-background.avif)` }}>
+    <div className="app-background" style={{ backgroundImage: `url(/images/AlternativeBackground.webp)` }}>
       <div className="overlay"></div>
       <FloatingDecorations />
       <div className="app-content">
