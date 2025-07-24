@@ -5,6 +5,7 @@ import { Gallery } from './pages/Gallery';
 import { RSVP } from './pages/RSVP';
 import { HowWeMet } from './pages/HowWeMet';
 import { Location } from './pages/Location';
+import { FAQ } from './pages/FAQ';
 import { PageTransition } from './components/PageTransition';
 import { FloatingDecorations } from './components/FloatingDecorations';
 
@@ -47,6 +48,12 @@ function NavLinks() {
       >
         How We Met
       </Link>
+      <Link
+        to="/faq"
+        className={`nav-link ${location.pathname === '/faq' ? 'active' : ''}`}
+      >
+        FAQ
+      </Link>
     </nav>
   );
 }
@@ -68,6 +75,7 @@ function AppContent() {
               <Route path="/gallery" element={<Gallery />} />
               <Route path="/rsvp" element={<RSVP />} />
               <Route path="/how-we-met" element={<HowWeMet />} />
+              <Route path="/faq" element={<FAQ />} />
             </Routes>
           </PageTransition>
         </AnimatePresence>
