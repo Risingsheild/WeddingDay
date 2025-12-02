@@ -64,7 +64,7 @@ export function Location() {
                         </div>
                     </div>
                     <div className="valet-note">
-                        <p>🚗 Don't worry about parking - we've got you covered with free valet!</p>
+                        <p>🚗 Don't worry about parking at Willows Lodge - we've got you covered with free valet!</p>
                     </div>
                 </motion.div>
             </div>

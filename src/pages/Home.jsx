@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+//import { useEffect, useState } from 'react';
 import { PageWrapper } from '../components/PageWrapper';
 import { motion } from 'framer-motion';
 import { WeddingCountdown } from '../components/WeddingCountdown';
@@ -30,10 +30,10 @@ export function Home() {
         >
           <h2>Event Schedule</h2>
           <ul className="timeline-list">
-            <li>3:00 PM – Guest Arrival</li>
-            <li>5:00 PM – Ceremony Begins</li>
-            <li>5:30 PM – Cocktail Hour</li>
-            <li>6:30 - 11:00 PM – Reception</li>
+            <li><span className="event-time">3:00 PM</span> – Guest Arrival</li>
+            <li><span className="event-time">5:00 PM</span> – Ceremony Begins</li>
+            <li><span className="event-time">5:30 PM</span> – Cocktail Hour</li>
+            <li><span className="event-time">6:30 - 11:00 PM</span> – Reception</li>
           </ul>
         </motion.div>
       </div>

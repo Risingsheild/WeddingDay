@@ -62,7 +62,7 @@ function AppContent() {
   const location = useLocation();
 
   return (
-    <div className="app-background" style={{ backgroundImage: `url(/images/AlternativeBackground.webp)` }}>
+    <div className="app-background" style={{ backgroundImage: `url(/images/Weddingarchbackground.webp)` }}>
       <div className="overlay"></div>
       <div className="app-content">
         <NavLinks />
