@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Dancing+Script&display=swap');
 
 iframe.square-box {
     display: block;
@@ -12,96 +12,135 @@ iframe.square-box {
 .center-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    gap: 2.5rem;
     width: 100%;
-    padding: 1rem;
+    padding: 2rem;
+    margin: 0 auto;
 }
 
 /* Hero section styles */
 .hero-wedding-bg {
-    width: 100vw;
-    min-height: 80px;
+    width: 95vw;
+    min-height: 120px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(120deg, rgba(186, 104, 241, 0.95) 60%, rgba(241, 225, 236, 0.85) 100%);
+    background: linear-gradient(135deg, rgba(186, 104, 241, 0.88) 0%, rgba(215, 97, 182, 0.85) 50%, rgba(241, 225, 236, 0.85) 100%);
     z-index: 1;
-    padding: 2.5rem 0 3.5rem 0;
+    padding: 3rem 2rem 4rem 2rem;
     position: relative;
     text-align: center;
     overflow: hidden;
-    border-radius: 4rem;
+    border-radius: 3rem;
     box-shadow:
-        0 24px 64px 0 rgba(184, 21, 111, 0.25),
-        /* pink glow, more spread */
-        0 8px 32px 0 rgba(0, 0, 0, 0.18);
-    /* deeper black shadow */
-    margin-left: -4%;
-
-    transform: translateX(-50%);
-}
-
-.hero-wedding-bg::before,
-.hero-wedding-bg::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 60px;
-    background-repeat: repeat-x;
-    background-size: contain;
-    z-index: 2;
-    pointer-events: none;
+        0 24px 64px 0 rgba(184, 21, 111, 0.28),
+        0 12px 32px 0 rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3),
+        0 8px 30px rgba(212, 175, 55, 0.06);
+    margin: 1rem auto;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    /* subtle gold rim using border-image for a refined metallic edge */
+    border-image: linear-gradient(90deg, rgba(212, 175, 55, 0.95), rgba(255, 223, 120, 0.6)) 1;
+    backdrop-filter: blur(10px);
 }
 
 .hero-wedding-bg::before {
+    content: "";
+    position: absolute;
     top: 0;
-    background-image: url('data:image/svg+xml;utf8,<svg width="400" height="60" viewBox="0 0 400 60" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 50 Q50 10 100 40 T200 30 T300 50 T400 20" stroke="%2396c7a6" stroke-width="4" fill="none"/><ellipse cx="60" cy="35" rx="10" ry="7" fill="%23f7e3ef"/><ellipse cx="65" cy="35" rx="6" ry="4" fill="%23e6b7d6"/><ellipse cx="120" cy="20" rx="8" ry="6" fill="%23f7e3ef"/><ellipse cx="125" cy="20" rx="4" ry="2" fill="%23e6b7d6"/><ellipse cx="200" cy="40" rx="12" ry="8" fill="%23f7e3ef"/><ellipse cx="205" cy="40" rx="6" ry="4" fill="%23e6b7d6"/><ellipse cx="320" cy="30" rx="10" ry="7" fill="%23f7e3ef"/><ellipse cx="325" cy="30" rx="5" ry="3" fill="%23e6b7d6"/><ellipse cx="350" cy="25" rx="8" ry="6" fill="%23f7e3ef"/><ellipse cx="355" cy="25" rx="4" ry="2" fill="%23e6b7d6"/><ellipse cx="90" cy="30" rx="4" ry="2" fill="%2396c7a6"/><ellipse cx="250" cy="35" rx="5" ry="3" fill="%2396c7a6"/></svg>');
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        radial-gradient(circle at 50% 8%, rgba(212, 175, 55, 0.12) 0%, rgba(212, 175, 55, 0.06) 8%, transparent 24%),
+        radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(255, 182, 193, 0.08) 0%, transparent 50%),
+        url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="floral" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse"><circle cx="100" cy="50" r="3" fill="rgba(255,255,255,0.15)"/><circle cx="80" cy="80" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="120" cy="80" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="100" cy="110" r="3" fill="rgba(255,255,255,0.15)"/><path d="M100 50 L85 75 M100 50 L115 75 M100 110 L85 85 M100 110 L115 85" stroke="rgba(255,255,255,0.08)" stroke-width="1" fill="none"/><circle cx="50" cy="150" r="2" fill="rgba(255,255,255,0.12)"/><circle cx="150" cy="150" r="2" fill="rgba(255,255,255,0.12)"/><path d="M50 130 Q50 150 60 160 M150 130 Q150 150 140 160" stroke="rgba(255,255,255,0.08)" stroke-width="1" fill="none"/></pattern></defs><rect width="1200" height="400" fill="none"/><rect width="1200" height="400" fill="url(%23floral)"/></svg>'),
+        url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="sparkles" x="0" y="0" width="300" height="300" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1.5" fill="rgba(255,255,255,0.2)"/><circle cx="100" cy="100" r="1" fill="rgba(255,255,255,0.15)"/><circle cx="150" cy="75" r="1" fill="rgba(255,255,255,0.15)"/><circle cx="200" cy="150" r="1.5" fill="rgba(255,255,255,0.2)"/><circle cx="75" cy="200" r="1" fill="rgba(255,255,255,0.15)"/><circle cx="250" cy="200" r="1" fill="rgba(255,255,255,0.15)"/></pattern></defs><rect width="1200" height="400" fill="url(%23sparkles)"/></svg>');
+    background-size: cover, cover, 200px 200px, 300px 300px;
+    background-position: center, center, 0 0, 0 0;
+    background-repeat: no-repeat, no-repeat, repeat, repeat;
+    border-radius: 3rem;
+    pointer-events: none;
+    z-index: 0;
 }
 
 .hero-wedding-bg::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
     bottom: 0;
-    background-image: url('data:image/svg+xml;utf8,<svg width="400" height="60" viewBox="0 0 400 60" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 10 Q50 50 100 20 T200 30 T300 10 T400 40" stroke="%2396c7a6" stroke-width="4" fill="none"/><ellipse cx="80" cy="25" rx="10" ry="7" fill="%23f7e3ef"/><ellipse cx="85" cy="25" rx="6" ry="4" fill="%23e6b7d6"/><ellipse cx="180" cy="40" rx="8" ry="6" fill="%23f7e3ef"/><ellipse cx="185" cy="40" rx="4" ry="2" fill="%23e6b7d6"/><ellipse cx="220" cy="20" rx="12" ry="8" fill="%23f7e3ef"/><ellipse cx="225" cy="20" rx="6" ry="4" fill="%23e6b7d6"/><ellipse cx="340" cy="35" rx="10" ry="7" fill="%23f7e3ef"/><ellipse cx="345" cy="35" rx="5" ry="3" fill="%23e6b7d6"/><ellipse cx="370" cy="45" rx="8" ry="6" fill="%23f7e3ef"/><ellipse cx="375" cy="45" rx="4" ry="2" fill="%23e6b7d6"/><ellipse cx="110" cy="40" rx="4" ry="2" fill="%2396c7a6"/><ellipse cx="270" cy="25" rx="5" ry="3" fill="%2396c7a6"/></svg>');
+    /* static vignette to ground the hero (no animation) */
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.0) 0%, rgba(0, 0, 0, 0.06) 85%), linear-gradient(120deg, rgba(212, 175, 55, 0.06), rgba(212, 175, 55, 0.02));
+    border-radius: 3rem;
+    pointer-events: none;
+    z-index: 0;
 }
 
 .hero-wedding-bg h1 {
-    font-family: 'Great Vibes', 'Dancing Script', cursive;
-    font-size: 5.5rem;
-    color: #7a4766;
-    letter-spacing: 3px;
-    text-shadow: 4px 4px 12px rgba(255, 255, 255, 0.8),
-        0 0 30px rgba(184, 21, 111, 0.4),
-        0 0 40px rgba(184, 21, 111, 0.2);
-    margin-bottom: 1rem;
-    animation: gentleFloat 3s ease-in-out infinite;
+    font-family: 'Playfair Display', 'Great Vibes', cursive;
+    font-size: 5rem;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: 4px;
+    text-shadow:
+        4px 4px 20px rgba(0, 0, 0, 0.3),
+        0 0 40px rgba(184, 21, 111, 0.3),
+        2px 2px 4px rgba(255, 255, 255, 0.2),
+        0 0 12px rgba(212, 175, 55, 0.08);
+    margin-bottom: 0.5rem;
     text-align: center;
 }
 
-@keyframes gentleFloat {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-10px);
-    }
+/* Decorative gold underline under the main headline */
+.hero-wedding-bg h1::after {
+    content: '';
+    display: block;
+    width: 220px;
+    height: 6px;
+    margin: 1rem auto 0 auto;
+    border-radius: 4px;
+    background: linear-gradient(90deg, rgba(255, 223, 120, 0.95), rgba(212, 175, 55, 0.9));
+    box-shadow: 0 6px 18px rgba(212, 175, 55, 0.08);
+    opacity: 0.95;
 }
 
+
 .hero-wedding-bg p {
-    font-family: 'Dancing Script', cursive;
-    font-size: 2rem;
-    color: #ebe1e8;
-    margin-bottom: 0.5rem;
+    font-family: 'Cormorant Garamond', 'Dancing Script', cursive;
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+    letter-spacing: 1px;
 }
 
 .hero-wedding-bg .date {
-    font-family: 'Dancing Script', cursive;
-    font-size: 2.2rem;
-    color: #f2f1f3;
+    font-family: 'Playfair Display', 'Dancing Script', cursive;
+    font-size: 2rem;
+    color: #fffbfe;
     margin-bottom: 0;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2), 0 0 6px rgba(212, 175, 55, 0.04);
+    /* small gold accent under the date */
+    position: relative;
+}
+
+.hero-wedding-bg .date::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, rgba(255, 223, 120, 0.9), rgba(212, 175, 55, 0.7));
+    border-radius: 2px;
+    opacity: 0.9;
 }
 
 /* Countdown section - keeping original styling */
@@ -111,30 +150,34 @@ iframe.square-box {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 2rem;
+    margin-bottom: 0;
 }
 
 /* Timeline card */
 .timeline-card {
     grid-column: 1 / -1;
-    background: rgba(255, 255, 255, 0.6);
-    border-radius: 1.5rem;
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
-    padding: 2.5rem;
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 2rem;
+    box-shadow:
+        0 12px 40px rgba(184, 21, 111, 0.15),
+        0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 3rem;
     margin: 0 auto;
-    max-width: 800px;
-    border: 1px solid rgba(184, 21, 111, 0.1);
+    max-width: 850px;
+    border: 2px solid rgba(184, 21, 111, 0.15);
     position: relative;
     z-index: 2;
     text-align: center;
+    backdrop-filter: blur(10px);
 }
 
 .timeline-card h2 {
-    font-family: 'Great Vibes', cursive;
-    font-size: 2.5rem;
-    color: #b8156f;
+    font-family: 'Playfair Display', 'Great Vibes', cursive;
+    font-size: 2.8rem;
+    color: #7a2757;
     margin-bottom: 2rem;
-    text-shadow: 3px 3px 6px rgba(5, 5, 5, 0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
+    font-weight: 700;
 }
 
 .timeline-list {
@@ -143,46 +186,51 @@ iframe.square-box {
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
-    max-width: 500px;
+    gap: 1.5rem;
+    max-width: 600px;
     margin: 0 auto;
 }
 
 .timeline-list li {
     position: relative;
-    padding: 1rem 1.5rem;
-    font-size: 1.2rem;
-    background: rgba(255, 255, 255, 0.7);
-    border-radius: 0.5rem;
-    border: 1px solid rgba(184, 21, 111, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 1.2rem 1.8rem;
+    font-size: 1.1rem;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(247, 227, 239, 0.6));
+    border-radius: 1rem;
+    border: 2px solid rgba(184, 21, 111, 0.15);
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1.2rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
 }
 
 .timeline-list li:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(184, 21, 111, 0.25), 0 4px 8px rgba(0, 0, 0, 0.1);
-    background: rgba(255, 255, 255, 0.85);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 32px rgba(184, 21, 111, 0.2), 0 4px 12px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(247, 227, 239, 0.8));
+    border-color: rgba(184, 21, 111, 0.3);
 }
 
 .timeline-list li::before {
     content: '💕';
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     flex-shrink: 0;
 }
 
 /* Location section */
 .location-section {
     grid-column: 1 / -1;
-    background: rgba(235, 234, 234, 0.664);
-    padding: 3rem;
-    border-radius: 1.5rem;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(184, 21, 111, 0.15);
-    backdrop-filter: blur(8px);
-    margin: 2rem auto;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 3.5rem;
+    border-radius: 2rem;
+    box-shadow:
+        0 12px 40px rgba(184, 21, 111, 0.12),
+        0 4px 12px rgba(0, 0, 0, 0.08);
+    border: 2px solid rgba(184, 21, 111, 0.1);
+    backdrop-filter: blur(10px);
+    margin: 1rem auto;
     max-width: 1200px;
 }
 
@@ -198,55 +246,62 @@ iframe.square-box {
 }
 
 .location-info h2 {
-    font-family: 'Great Vibes', cursive;
-    font-size: 3rem;
-    color: #000000;
+    font-family: 'Playfair Display', cursive;
+    font-size: 2.8rem;
+    color: #5a2d4d;
     margin-bottom: 1.5rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
     text-align: center;
+    font-weight: 700;
 }
 
 .location-info p {
-    font-size: 1.2rem;
+    font-size: 1.05rem;
     margin-bottom: 2rem;
-    color: #22252b;
-    line-height: 1.6;
+    color: #3a3a3a;
+    line-height: 1.8;
     text-align: center;
+    font-family: 'Cormorant Garamond', serif;
 }
 
 .directions-link {
     display: inline-block;
     margin-left: 1rem;
-    padding: 0.5rem 1.5rem;
-    background: linear-gradient(135deg, #b8156f, #e6b7d6);
+    padding: 0.7rem 2rem;
+    background: linear-gradient(135deg, #d84c6f, #b8156f);
     color: rgb(255, 255, 255);
     text-decoration: none;
-    border-radius: 25px;
-    font-weight: 500;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 2px 8px rgba(184, 21, 111, 0.2);
+    border-radius: 2rem;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 0 4px 16px rgba(184, 21, 111, 0.25);
+    border: 2px solid transparent;
+    font-family: 'Cormorant Garamond', serif;
 }
 
 .directions-link:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(184, 21, 111, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(184, 21, 111, 0.35);
+    background: linear-gradient(135deg, #b8156f, #8a0f54);
 }
 
 .hotels-list {
-    margin-top: 3rem;
-    background: rgba(255, 255, 255, 0.7);
-    padding: 2rem;
-    border-radius: 1rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    margin-top: 2rem;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(247, 227, 239, 0.5));
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+    border: 2px solid rgba(184, 21, 111, 0.1);
 }
 
 .hotels-list h3 {
-    font-family: 'Great Vibes', cursive;
-    font-size: 2.2rem;
+    font-family: 'Playfair Display', cursive;
+    font-size: 2rem;
     color: #b8156f;
     margin-bottom: 1.5rem;
     text-align: center;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+    font-weight: 700;
 }
 
 .hotels-list ul {
@@ -255,21 +310,22 @@ iframe.square-box {
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.2rem;
 }
 
 .hotels-list li {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
-    padding: 1rem 1.5rem;
-    border-radius: 12px;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(184, 21, 111, 0.1);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.8));
+    padding: 1.2rem 1.8rem;
+    border-radius: 1rem;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    border: 2px solid rgba(184, 21, 111, 0.1);
 }
 
 .hotels-list li:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(184, 21, 111, 0.15);
-    background: linear-gradient(135deg, rgb(255, 255, 255), rgba(214, 136, 182, 0.479));
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(184, 21, 111, 0.2);
+    background: linear-gradient(135deg, rgb(255, 255, 255), rgba(214, 136, 182, 0.2));
+    border-color: rgba(184, 21, 111, 0.3);
 }
 
 .hotels-list li a {
@@ -277,9 +333,10 @@ iframe.square-box {
     color: #b81e72;
     text-decoration: none;
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     text-align: center;
     transition: color 0.3s ease;
+    font-family: 'Cormorant Garamond', serif;
 }
 
 .hotels-list li a:hover {
@@ -288,11 +345,12 @@ iframe.square-box {
 
 .map-container {
     position: relative;
-    border-radius: 1rem;
+    border-radius: 1.5rem;
     overflow: hidden;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
     height: 100%;
     min-height: 400px;
+    border: 2px solid rgba(184, 21, 111, 0.1);
 }
 
 iframe.square-box {
@@ -301,7 +359,7 @@ iframe.square-box {
     height: 100%;
     min-height: 400px;
     border: none;
-    border-radius: 1rem;
+    border-radius: 1.3rem;
 }
 
 img.square-box {
@@ -311,27 +369,28 @@ img.square-box {
     min-height: 400px;
     object-fit: cover;
     border: none;
-    border-radius: 1rem;
+    border-radius: 1.3rem;
 }
 
 .valet-note {
-    margin-top: 2rem;
+    margin-top: 2.5rem;
     text-align: center;
-    padding: 1.5rem;
-    background: linear-gradient(135deg, rgba(107, 16, 62, 0.1), rgba(230, 183, 214, 0.1));
-    border-radius: 1rem;
-    border: 1px solid rgba(184, 21, 111, 0.2);
+    padding: 1.8rem;
+    background: linear-gradient(135deg, rgba(107, 16, 62, 0.08), rgba(230, 183, 214, 0.15));
+    border-radius: 1.2rem;
+    border: 2px solid rgba(184, 21, 111, 0.2);
 }
 
 .valet-note p {
-    font-size: 1.2rem;
-    color: #020101;
+    font-size: 1.1rem;
+    color: #3a3a3a;
     font-weight: 500;
     margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 0.8rem;
+    font-family: 'Cormorant Garamond', serif;
 }
 
 @media (max-width: 1024px) {
@@ -356,11 +415,11 @@ img.square-box {
     }
 
     .location-info h2 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .location-info p {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     .hotels-list {
@@ -368,11 +427,37 @@ img.square-box {
     }
 
     .hotels-list h3 {
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
 
     .valet-note p {
-        font-size: 1.1rem;
+        font-size: 1rem;
+    }
+
+    .center-content {
+        padding: 1rem;
+        gap: 2rem;
+    }
+
+    .hero-wedding-bg h1 {
+        font-size: 3rem;
+        letter-spacing: 2px;
+    }
+
+    .hero-wedding-bg p {
+        font-size: 1.3rem;
+    }
+
+    .hero-wedding-bg .date {
+        font-size: 1.5rem;
+    }
+
+    .timeline-card {
+        padding: 2rem;
+    }
+
+    .timeline-card h2 {
+        font-size: 2rem;
     }
 }
 
@@ -382,11 +467,11 @@ img.square-box {
     }
 
     .location-info h2 {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .location-info p {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     .directions-link {
@@ -400,7 +485,7 @@ img.square-box {
     }
 
     .hotels-list h3 {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
     }
 
     .hotels-list li {
@@ -408,7 +493,7 @@ img.square-box {
     }
 
     .hotels-list li a {
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
 
     .valet-note {
@@ -416,7 +501,45 @@ img.square-box {
     }
 
     .valet-note p {
+        font-size: 0.9rem;
+    }
+
+    .center-content {
+        padding: 0.5rem;
+        gap: 1.5rem;
+    }
+
+    .hero-wedding-bg {
+        padding: 2rem 1rem;
+        border-radius: 2rem;
+    }
+
+    .hero-wedding-bg h1 {
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }
+
+    .hero-wedding-bg p {
         font-size: 1rem;
+    }
+
+    .hero-wedding-bg .date {
+        font-size: 1.1rem;
+    }
+
+    .timeline-card {
+        padding: 1.5rem;
+    }
+
+    .timeline-card h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .timeline-list li {
+        padding: 1rem 1.2rem;
+        font-size: 0.95rem;
+        gap: 0.8rem;
     }
 }
 
@@ -440,23 +563,18 @@ body {
 }
 
 .countdown-heading {
-    font-family: 'Satisfy', cursive;
-    font-size: 2.7rem;
-    color: #b12a7b;
+    font-family: 'Playfair Display', cursive;
+    font-size: 2.5rem;
+    color: #7a2757;
     text-align: center;
     margin-bottom: 1.5rem;
     margin-top: 1.5rem;
     text-shadow:
-        0 2px 8px rgba(184, 21, 111, 0.25),
-        0 4px 16px rgba(0, 0, 0, 0.18),
-        1px 1px 0 #fff,
-        0 0 2px #b8156f;
+        0 2px 8px rgba(184, 21, 111, 0.2),
+        0 4px 16px rgba(0, 0, 0, 0.1);
     letter-spacing: 2px;
-    font-weight: bold;
-    /* Subtle outline for extra clarity */
-    -webkit-text-stroke: 1px #722c56;
-    /* Gradient overlay for a luxe look */
-    background: linear-gradient(90deg, #6e6169 0%, #e6b7d6 100%);
+    font-weight: 800;
+    background: linear-gradient(90deg, #5a2d4d 0%, #d84c6f 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -467,20 +585,21 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 1.7rem;
-    background: linear-gradient(120deg, #fff6fa 60%, #e6b7d6 100%);
-    backdrop-filter: blur(8px);
-    padding: 1.2rem 1.5rem;
-    border-radius: 1.5rem;
-    border: 2px double #b8156f;
+    gap: 1.5rem;
+    background: linear-gradient(135deg, #fff6fa 0%, #e6b7d6 50%, #fff6fa 100%);
+    backdrop-filter: blur(10px);
+    padding: 1.5rem 2rem;
+    border-radius: 2rem;
+    border: 2px solid rgba(184, 21, 111, 0.2);
     box-shadow:
-        0 8px 24px 0 rgba(184, 21, 111, 0.18),
-        0 2px 8px 0 rgba(0, 0, 0, 0.12);
-    font-family: 'Dancing Script', cursive;
+        0 12px 40px rgba(184, 21, 111, 0.2),
+        0 4px 12px rgba(0, 0, 0, 0.08),
+        0 6px 20px rgba(212, 175, 55, 0.04);
+    font-family: 'Cormorant Garamond', cursive;
     position: relative;
     flex-wrap: wrap;
-    margin: 2rem auto;
-    max-width: 700px;
+    margin: 1.5rem auto 2rem auto;
+    max-width: 750px;
     animation: popIn 1.2s cubic-bezier(.68, -0.55, .27, 1.55);
 }
 
@@ -500,47 +619,94 @@ body {
     }
 }
 
-.wedding-countdown::before {
-    content: '💍❤️💍';
+/* Static decorative flourish above the countdown (replaces floating emojis) */
+.wedding-countdown::after {
+    content: "";
     position: absolute;
-    top: -2.2rem;
+    top: -1.6rem;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 2.5rem;
-    animation: pulse 1.5s ease-in-out infinite;
-    filter: drop-shadow(0 2px 6px #b8156f33);
+    width: 180px;
+    height: 28px;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='360' height='56' viewBox='0 0 360 56'><g fill='none' stroke='%23b81e72' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M20 28 C60 0 120 0 180 28 C240 56 300 56 340 28' opacity='0.12' /><path d='M40 28 C80 8 120 8 180 28 C240 48 280 48 320 28' opacity='0.24' /><g transform='translate(160,0)'><path d='M20 10 C22 6 28 6 30 10 C32 14 28 18 26 20 C24 22 20 24 20 24 C20 24 16 22 14 20 C12 18 8 14 10 10 C12 6 18 6 20 10 Z' fill='%23d84c6f' opacity='0.95'/></g></g></svg>");
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 10;
+    pointer-events: none;
+    opacity: 0.95;
+}
+
+
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
 }
 
 .countdown-unit {
-    background: rgba(197, 197, 197, 0.363);
-    border-radius: 1.4rem;
-    box-shadow: 0 2px 8px rgba(184, 21, 111, 0.10);
-    padding: 0.9rem 1.5rem;
-    width: 5.5rem;
+    background: linear-gradient(135deg, rgba(230, 183, 214, 0.5), rgba(255, 255, 255, 0.6));
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 12px rgba(184, 21, 111, 0.12);
+    padding: 1.2rem 1.8rem;
+    width: 6rem;
     text-align: center;
-    font-family: 'Georgia', serif;
-    border: 2px solid #e6b7d6;
+    font-family: 'Cormorant Garamond', serif;
+    border: 2px solid rgba(230, 183, 214, 0.4);
     margin: 0;
-    transition: transform 0.2s;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 0 1px rgba(212, 175, 55, 0.03);
 }
 
+/* Tiny gold top accent on each countdown card */
+.countdown-unit::before {
+    content: '';
+    position: absolute;
+    top: 0.6rem;
+    left: 12%;
+    right: 12%;
+    height: 4px;
+    border-radius: 4px;
+    background: linear-gradient(90deg, rgba(255, 223, 120, 0.95), rgba(212, 175, 55, 0.85));
+    opacity: 0.8;
+}
+
+
 .countdown-unit:hover {
-    transform: scale(1.07);
-    box-shadow: 0 8px 24px rgba(77, 9, 46, 0.247);
+    transform: translateY(-5px) scale(1.08);
+    box-shadow: 0 12px 32px rgba(184, 21, 111, 0.25);
+    background: linear-gradient(135deg, rgba(230, 183, 214, 0.7), rgba(255, 255, 255, 0.9));
+    border-color: rgba(184, 21, 111, 0.4);
 }
 
 .countdown-value {
-    font-size: 3.2rem;
+    font-size: 2.8rem;
     font-weight: bold;
-    color: #a82775e7;
-    font-family: 'Satisfy', cursive;
-    text-shadow: 0 2px 8px #e6b7d6, 0 1px 2px #808080;
+    color: #7a2757;
+    font-family: 'Playfair Display', cursive;
+    text-shadow: 0 2px 6px rgba(230, 183, 214, 0.5);
+    text-align: center;
+    line-height: 1;
+    display: block;
 }
 
 .countdown-label {
-    font-size: 2rem;
-    color: #000000;
-    font-family: 'Dancing Script', cursive;
-    margin-top: 0.3rem;
+    font-size: 1rem;
+    color: #5a2d4d;
+    font-family: 'Cormorant Garamond', cursive;
+    margin-top: 0.5rem;
     letter-spacing: 1px;
+    font-weight: 500;
+    text-align: center;
+    display: block;
 }

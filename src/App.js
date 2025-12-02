@@ -7,7 +7,7 @@ import { HowWeMet } from './pages/HowWeMet';
 import { Location } from './pages/Location';
 import { FAQ } from './pages/FAQ';
 import { PageTransition } from './components/PageTransition';
-import { FloatingDecorations } from './components/FloatingDecorations';
+import { Footer } from './components/Footer';
 
 import './App.css';
 import './styles/Navbar.css';
@@ -64,7 +64,6 @@ function AppContent() {
   return (
     <div className="app-background" style={{ backgroundImage: `url(/images/AlternativeBackground.webp)` }}>
       <div className="overlay"></div>
-      <FloatingDecorations />
       <div className="app-content">
         <NavLinks />
         <AnimatePresence mode="wait">
@@ -79,6 +78,7 @@ function AppContent() {
             </Routes>
           </PageTransition>
         </AnimatePresence>
+        <Footer />
       </div>
     </div>
   );

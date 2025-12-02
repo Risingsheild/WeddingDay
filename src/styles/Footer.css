@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Cormorant+Garamond:wght@400;500;600&display=swap');
+
+.wedding-footer {
+    background: linear-gradient(135deg, #2a2a2a 0%, #3a2a3a 50%, #2a2a3a 100%);
+    color: #f0f0f0;
+    padding: 4rem 2rem 2rem 2rem;
+    margin-top: auto;
+    border-top: 2px solid rgba(184, 21, 111, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.wedding-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(184, 21, 111, 0.5), transparent);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.footer-section {
+    text-align: center;
+}
+
+.footer-section h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #e6b7d6;
+    margin: 0 0 0.5rem 0;
+    letter-spacing: 1px;
+}
+
+.footer-section h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    color: #d84c6f;
+    margin: 0 0 1rem 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.wedding-date {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    color: #d84c6f;
+    margin: 0.5rem 0;
+    font-weight: 500;
+}
+
+.wedding-location {
+    font-size: 0.95rem;
+    color: #b0b0b0;
+    margin: 0.5rem 0 0 0;
+}
+
+.footer-section a {
+    display: block;
+    color: #e0e0e0;
+    text-decoration: none;
+    margin: 0.6rem 0;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    padding: 0.4rem;
+    border-radius: 0.5rem;
+}
+
+.footer-section a:hover {
+    color: #e6b7d6;
+    background: rgba(184, 21, 111, 0.1);
+    transform: translateX(4px);
+}
+
+.footer-decorative {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    animation: decorativeFloat 4s ease-in-out infinite;
+}
+
+.heart-decoration {
+    font-size: 1.5rem;
+    opacity: 0.8;
+    animation: heartPulse 2s ease-in-out infinite;
+}
+
+.heart-decoration:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.heart-decoration:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.heart-decoration:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+@keyframes decorativeFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes heartPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: scale(1.15);
+        opacity: 1;
+    }
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(184, 21, 111, 0.2);
+    color: #999999;
+    font-size: 0.85rem;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .wedding-footer {
+        padding: 3rem 1.5rem 1.5rem 1.5rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .footer-section {
+        padding: 0 1rem;
+    }
+
+    .footer-section h3 {
+        font-size: 1.5rem;
+    }
+
+    .footer-section h4 {
+        font-size: 1rem;
+    }
+
+    .footer-decorative {
+        gap: 1.5rem;
+        margin-top: 1rem;
+    }
+
+    .heart-decoration {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .wedding-footer {
+        padding: 2rem 1rem 1rem 1rem;
+    }
+
+    .footer-section h3 {
+        font-size: 1.3rem;
+    }
+
+    .footer-section h4 {
+        font-size: 0.9rem;
+    }
+
+    .footer-section a {
+        font-size: 0.85rem;
+    }
+
+    .footer-decorative {
+        gap: 1rem;
+    }
+
+    .heart-decoration {
+        font-size: 1rem;
+    }
+}
