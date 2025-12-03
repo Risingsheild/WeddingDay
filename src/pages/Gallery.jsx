@@ -5,7 +5,7 @@ import '../styles/Gallery.css';
 export function Gallery() {
   const galleryImages = [
     { src: '/images/Weddingimg1.jpg', caption: "The Day She Said Yes" },
-    { src: '/images/Weddingimg2.jpg', caption: "Beach Sunset" },
+    { src: '/images/OurFirstTrip.png', caption: "Our First Trip" },
     { src: '/images/Weddingimg3.jpg', caption: "Mountain Adventure" },
     { src: '/images/Weddingimg4.jpg', caption: "City Lights" },
     { src: '/images/Weddingimg5.jpg', caption: "Coffee Date" },
