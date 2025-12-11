@@ -17,7 +17,7 @@ const timelineEvents = [
     description: "We met at a board game tavern. Were I learned Katie was a terrible loser and she learned I was a terrible winner.",
     icon: "🎲",
     image: "/images/boardgame.webp",
-    funFact: "We played Catan for 3 hours!"
+    funFact: "We played for hours and hours! Till she got so mad she threw the game in the trash."
   },
   {
     date: "Special Moment",

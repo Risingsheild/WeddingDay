@@ -10,7 +10,7 @@ const faqData = [
     questions: [
       {
         question: "What time should I arrive?",
-        answer: "Guest arrival begins at 3:00 PM. We recommend arriving by 4:45 PM to ensure you're seated before the ceremony begins at 5:00 PM."
+        answer: "Guest arrival begins at 4:00 PM. We recommend arriving by 4:45 PM to ensure you're seated before the ceremony begins at 5:00 PM."
       },
       {
         question: "What is the dress code?",
@@ -22,7 +22,7 @@ const faqData = [
       },
       {
         question: "How long will the celebration last?",
-        answer: "The festivities begin at 3:00 PM and will conclude around 11:00 PM. This includes the ceremony, cocktail hour, dinner, and dancing!"
+        answer: "The festivities begin at 5:00 PM and will conclude around 11:00 PM. This includes the ceremony, cocktail hour, dinner, and dancing!"
       }
     ]
   },
@@ -94,7 +94,7 @@ const faqData = [
     questions: [
       {
         question: "Are children welcome?",
-        answer: "We love your little ones! Children are welcome at both the ceremony and reception. We'll have some kid-friendly activities and meal options available."
+        answer: "We love your little ones! But we are not able to provide childcare. We recommend arranging your own childcare if you'd prefer to fully enjoy the celebration."
       },
       {
         question: "Can I bring a plus-one?",

@@ -49,22 +49,39 @@ body {
   min-height: 100vh;
 }
 
-/* Responsive adjustments */
+/* Responsive adjustments for horizontal screens */
 @media (max-width: 1200px) {
   .app-background {
-    background-size: 70% auto;
+    background-size: cover;
   }
 }
 
 @media (max-width: 768px) {
   .app-background {
-    background-size: 90% auto;
+    background-size: cover;
   }
 }
 
 @media (max-width: 480px) {
   .app-background {
-    background-size: 100% auto;
+    background-size: cover;
+  }
+}
+
+/* Only use contain for extreme vertical ratios */
+@media (min-aspect-ratio: 1/2) and (max-aspect-ratio: 1/1) {
+  .app-background {
+    background-size: contain;
+    background-position: center top;
+    background-color: #f5f5f5; /* Fallback color */
+  }
+}
+
+/* Ultra-wide screens */
+@media (min-aspect-ratio: 21/9) {
+  .app-background {
+    background-size: cover;
+    background-position: center;
   }
 }
 
