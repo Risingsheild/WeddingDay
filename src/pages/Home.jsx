@@ -30,18 +30,10 @@ export function Home() {
         >
           <h2>Event Schedule</h2>
           <ul className="timeline-list">
-<<<<<<< HEAD
             <li><span className="event-time">3:00 PM</span> – Guest Arrival</li>
             <li><span className="event-time">5:00 PM</span> – Ceremony Begins</li>
             <li><span className="event-time">5:30 PM</span> – Cocktail Hour</li>
             <li><span className="event-time">6:30 - 11:00 PM</span> – Reception</li>
-=======
-            <li>4:00 PM – Guest Arrival</li>
-            <li>5:00 PM – Ceremony Begins</li>
-            <li>5:30 PM – Cocktail Hour</li>
-            <li>6:30 PM – Reception Begins</li>
-            <li>11:00 PM – Event Ends</li>
->>>>>>> 7d5fcf9 (Small things)
           </ul>
         </motion.div>
       </div>
