@@ -10,7 +10,7 @@ const faqData = [
     questions: [
       {
         question: "What time should I arrive?",
-        answer: "Guest arrival begins at 4:00 PM. We recommend arriving by 4:45 PM to ensure you're seated before the ceremony begins at 5:00 PM."
+        answer: "We recommend arriving by 4:30 PM to ensure you're seated before the ceremony begins at 5:00 PM."
       },
       {
         question: "What is the dress code?",
@@ -94,34 +94,12 @@ const faqData = [
     questions: [
       {
         question: "Are children welcome?",
-        answer: "We love your little ones! But we are not able to provide childcare. We recommend arranging your own childcare if you'd prefer to fully enjoy the celebration."
+        answer: "We love your little ones, but we've chosen to make this special day adults only."
       },
       {
         question: "Can I bring a plus-one?",
         answer: "Plus-ones are specified on your invitation. If your invitation says 'and guest' or includes your partner's name, then yes! If you're unsure, please reach out to us directly."
       },
-      {
-        question: "Will there be childcare available?",
-        answer: "While we're not providing formal childcare, the venue has quiet spaces where families can step away if needed. We recommend arranging your own childcare if you'd prefer to fully enjoy the celebration."
-      }
-    ]
-  },
-  {
-    category: "Music & Entertainment",
-    icon: "🎵",
-    questions: [
-      {
-        question: "Will there be dancing?",
-        answer: "Absolutely! We'll have a dance floor and DJ playing a mix of classics, current hits, and your song requests. Don't forget to include your song request when you RSVP!"
-      },
-      {
-        question: "What kind of music will you play?",
-        answer: "We're planning a mix of romantic classics for dinner, upbeat hits for dancing, and some special songs that are meaningful to us. We love everything from indie folk to classic rock to current pop!"
-      },
-      {
-        question: "Can I request a song?",
-        answer: "Yes! There's a spot on our RSVP form for song requests. We can't guarantee every song will be played, but we'll do our best to include your favorites."
-      }
     ]
   },
   {

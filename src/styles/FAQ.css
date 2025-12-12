@@ -233,7 +233,7 @@
 
 .contact-person a {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.55rem;
+    font-size: 1.4rem;
     color: var(--mauve-600, #8d5fc7);
     text-decoration: none;
     font-weight: 600;
@@ -248,7 +248,7 @@
 
 .contact-person p {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.45rem;
+    font-size: 1rem;
     color: var(--mauve-600, #000000);
     margin: 0;
     font-style: italic;

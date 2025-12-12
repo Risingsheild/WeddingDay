@@ -30,7 +30,7 @@ export function Home() {
         >
           <h2>Event Schedule</h2>
           <ul className="timeline-list">
-            <li><span className="event-time">3:00 PM</span> – Guest Arrival</li>
+            <li><span className="event-time">4:30 PM</span> – Guest Arrival</li>
             <li><span className="event-time">5:00 PM</span> – Ceremony Begins</li>
             <li><span className="event-time">5:30 PM</span> – Cocktail Hour</li>
             <li><span className="event-time">6:30 - 11:00 PM</span> – Reception</li>
