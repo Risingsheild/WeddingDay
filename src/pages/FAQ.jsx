@@ -108,7 +108,7 @@ const faqData = [
     questions: [
       {
         question: "What if it rains?",
-        answer: "April in Washington can be unpredictable, but don't worry! Willows Lodge has a beautiful indoor ceremony space that's just as romantic as the outdoor garden. We'll make the final decision the morning of the wedding."
+        answer: "April in Washington can be unpredictable, but don't worry! Willows Lodge has a beautiful awning space that will protect us."
       },
       {
         question: "Should I bring a jacket?",
