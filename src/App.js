@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import { Home } from './pages/Home';
-import { Gallery } from './pages/Gallery';
+// import { Gallery } from './pages/Gallery';
 import { RSVP } from './pages/RSVP';
 import { HowWeMet } from './pages/HowWeMet';
 import { Location } from './pages/Location';
@@ -30,12 +30,12 @@ function NavLinks() {
       >
         Location
       </Link>
-      <Link
+      {/* <Link
         to="/gallery"
         className={`nav-link ${location.pathname === '/gallery' ? 'active' : ''}`}
       >
         Gallery
-      </Link>
+      </Link> */}
       <Link
         to="/rsvp"
         className={`nav-link ${location.pathname === '/rsvp' ? 'active' : ''}`}
@@ -71,7 +71,7 @@ function AppContent() {
             <Routes location={location} key={location.pathname}>
               <Route path="/" element={<Home />} />
               <Route path="/location" element={<Location />} />
-              <Route path="/gallery" element={<Gallery />} />
+              {/* <Route path="/gallery" element={<Gallery />} /> */}
               <Route path="/rsvp" element={<RSVP />} />
               <Route path="/how-we-met" element={<HowWeMet />} />
               <Route path="/faq" element={<FAQ />} />
