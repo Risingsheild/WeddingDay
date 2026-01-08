@@ -43,7 +43,7 @@ export function RSVP() {
                 ) : (
                     <>
                         <iframe
-                            src="https://docs.google.com/forms/d/e/1FAIpQLSfbBjrYKsfP8YrU_A_nGOJYQTyI8mCEDLB-x14-oANwRsC2JA/viewform?embedded=true"
+                            src="https://docs.google.com/forms/d/e/1FAIpQLSfbBjrYKsfP8YrU_A_nGOJYQTyI8mCEDLB-x14-oANwRsC2JA/viewform?usp=publish-editor"
                             width="100%"
                             height="800"
                             frameBorder="0"
