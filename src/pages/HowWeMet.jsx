@@ -28,6 +28,22 @@ const timelineEvents = [
     funFact: "We both said 'I love you' at the same time."
   },
   {
+    date: "First Trip",
+    title: "Adventure Together",
+    description: "Our First big road trip where we explored the christmas lights in Leavenworth Washington.",
+    icon: "✈️",
+    image: "/images/first_trip.jpg",
+    funFact: "We almost got stuck in the snow together! And Nick ran away from me in a store after eating a way to Spicy Sauce."
+  },
+  {
+    date: "Moving In",
+    title: "Home Sweet Home",
+    description: "Taking the big step to live together and build a home filled with love and laughter.",
+    icon: "🏡",
+    image: "/images/moving_in.jpg",
+    funFact: "We adopted our first pet together! PANCAKE now named SPIKE."
+  },
+  {
     date: "The Proposal",
     title: "The Big Question",
     description: "The magical moment when we decided to spend forever together.",
