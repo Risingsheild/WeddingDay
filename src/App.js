@@ -8,10 +8,12 @@ import { Location } from './pages/Location';
 import { FAQ } from './pages/FAQ';
 import { PageTransition } from './components/PageTransition';
 import { Footer } from './components/Footer';
+import { ScrollToTopButton } from './components/ScrollToTopButton';
 
 import './App.css';
 import './styles/Navbar.css';
 import './styles/WeddingCountdown.css';
+import './components/ScrollToTopButton.css';
 
 function NavLinks() {
   const location = useLocation();
@@ -79,6 +81,7 @@ function AppContent() {
           </PageTransition>
         </AnimatePresence>
         <Footer />
+        <ScrollToTopButton />
       </div>
     </div>
   );
