@@ -4,14 +4,6 @@ import '../styles/HowWeMet.css';
 
 const timelineEvents = [
   {
-    date: "First Meeting",
-    title: "The Beginning",
-    description: "Our paths crossed at [location], where a simple hello turned into hours of conversation.",
-    icon: "💫",
-    image: "/images/first_meeting.jpg",
-    funFact: "Nick almost spilled his drink in excitement."
-  },
-  {
     date: "First Date",
     title: "Board Game Night",
     description: "We met at a board game tavern. Were I learned Katie was a terrible loser and she learned I was a terrible winner.",
@@ -21,10 +13,10 @@ const timelineEvents = [
   },
   {
     date: "Special Moment",
-    title: "The Connection",
-    description: "That moment when we both knew this was something special.",
+    title: "Katie's Graduation",
+    description: "Katie graduating from University of Washington with her PharmD.",
     icon: "💝",
-    image: "/images/connection.jpg",
+    image: "/images/PharmGrad.jpg",
     funFact: "We both said 'I love you' at the same time."
   },
   {
@@ -32,24 +24,32 @@ const timelineEvents = [
     title: "Adventure Together",
     description: "Our First big road trip where we explored the christmas lights in Leavenworth Washington.",
     icon: "✈️",
-    image: "/images/first_trip.jpg",
+    image: "/images/Bellingham.jpg",
     funFact: "We almost got stuck in the snow together! And Nick ran away from me in a store after eating a way to Spicy Sauce."
   },
   {
-    date: "Moving In",
-    title: "Home Sweet Home",
-    description: "Taking the big step to live together and build a home filled with love and laughter.",
-    icon: "🏡",
-    image: "/images/moving_in.jpg",
-    funFact: "We adopted our first pet together! PANCAKE now named SPIKE."
+    date: "Spartan Race",
+    title: "Getting Dirty",
+    description: "We tackled our first Spartan Race together. Mud, sweat, and teamwork!",
+    icon: "🏃‍♂️",
+    image: "/images/SpartanRace.jpg",
+    funFact: "Katie Conquered her fear of Heights on the rope climb! Very Proud of her!"
   },
   {
     date: "The Proposal",
     title: "The Big Question",
     description: "The magical moment when we decided to spend forever together.",
     icon: "💍",
-    image: "/images/proposal.jpg",
+    image: "/images/Weddingimg1.jpg",
     funFact: "Nick almost dropped the ring!"
+  },
+  {
+    date: "Post Poposal Dinner",
+    title: "Dinner Celebration", 
+    description: "Surrounded by friends and family, we got show off the ring and celebrate our engagement.",
+    icon: "🎉",
+    image: "/images/Engagement-Dinner.jpg",
+    funFact: "The restaurant gave us some free champagne to celebrate!"
   }
 ];
 
