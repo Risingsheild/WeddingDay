@@ -36,7 +36,7 @@ const faqData = [
       },
       {
         question: "Are there hotel room blocks available?",
-        answer: "We have secured special group rates at Willows Lodge and nearby hotels. Please see our Location page for booking details and discount codes. We recommend booking early as rooms fill up quickly!"
+        answer: "We have secured special group rates at Willows Lodge. Please see our Location page for booking details and discount codes. We recommend booking early as rooms fill up quickly!"
       },
       {
         question: "What's the best airport to fly into?",

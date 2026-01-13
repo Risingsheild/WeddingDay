@@ -6,34 +6,35 @@ const timelineEvents = [
   {
     date: "First Date",
     title: "Board Game Night",
-    description: "We met at a board game tavern. Were I learned Katie was a terrible loser and she learned I was a terrible winner.",
+    description: "We met at a board game tavern and quickly learned how competitive we both can be!",
     icon: "🎲",
     image: "/images/boardgame.webp",
-    funFact: "We played for hours and hours! Till she got so mad she threw the game in the trash."
+    funFact: "The winner of battleship is still a hot topic of debate"
+  },
+   {
+    date: "First Trip",
+    title: "Adventure Together",
+    description: "Our first big road trip where we explored the christmas lights in Leavenworth Washington.",
+    icon: "✈️",
+    image: "/images/Bellingham.jpg",
+    funFact: "We almost got stuck in the snow but the good food and beautiful lights were worth it!"
   },
   {
     date: "Special Moment",
     title: "Katie's Graduation",
-    description: "Katie graduating from University of Washington with her PharmD.",
+    description: "Katie graduating from University of Washington with her PharmD",
     icon: "💝",
     image: "/images/PharmGrad.jpg",
-    funFact: "We both said 'I love you' at the same time."
+    funFact: "The end of a chapter in Seattle and the start of a new one in Tacoma!"
   },
-  {
-    date: "First Trip",
-    title: "Adventure Together",
-    description: "Our First big road trip where we explored the christmas lights in Leavenworth Washington.",
-    icon: "✈️",
-    image: "/images/Bellingham.jpg",
-    funFact: "We almost got stuck in the snow together! And Nick ran away from me in a store after eating a way to Spicy Sauce."
-  },
+ 
   {
     date: "Spartan Race",
     title: "Getting Dirty",
     description: "We tackled our first Spartan Race together. Mud, sweat, and teamwork!",
     icon: "🏃‍♂️",
     image: "/images/SpartanRace.jpg",
-    funFact: "Katie Conquered her fear of Heights on the rope climb! Very Proud of her!"
+    funFact: "Katie conquered her fear of heights on the rope climb! Very proud of her!"
   },
   {
     date: "The Proposal",
@@ -44,12 +45,12 @@ const timelineEvents = [
     funFact: "Nick almost dropped the ring!"
   },
   {
-    date: "Post Poposal Dinner",
+    date: "Post Proposal Dinner",
     title: "Dinner Celebration", 
-    description: "Surrounded by friends and family, we got show off the ring and celebrate our engagement.",
+    description: "Surrounded by friends and family, we got to show off the ring and celebrate our engagement.",
     icon: "🎉",
     image: "/images/Engagement-Dinner.jpg",
-    funFact: "The restaurant gave us some free champagne to celebrate!"
+    funFact: "The restaurant gave us free champagne to celebrate!"
   }
 ];
 
