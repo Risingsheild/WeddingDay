@@ -249,7 +249,7 @@ iframe.square-box {
 .timeline-list li::before {
     content: '✦';
     position: absolute;
-    left: 1.2rem;
+    left: 0.3rem;
     font-size: 1.6rem;
     color: #d84c6f;
     font-weight: 900;
@@ -261,6 +261,13 @@ iframe.square-box {
     font-weight: 800;
     color: #a01860;
     margin-right: 0.4rem;
+}
+
+.time-period {
+    font-size: 0.75em;
+    font-weight: 600;
+    margin-left: 0.1rem;
+    vertical-align: baseline;
 }
 
 /* Location section */
