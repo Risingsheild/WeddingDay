@@ -216,11 +216,56 @@ select:focus {
     }
 
     .rsvp-iframe {
-        height: 1000px;
+        height: 900px;
     }
 
     .edit-info {
         margin: 1rem 0.5rem 0;
         padding: 1rem;
+    }
+
+    .radio-group {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .rsvp-container {
+        margin: 0.5rem;
+        padding: 1rem;
+        border-radius: 12px;
+    }
+
+    .rsvp-container h2 {
+        font-size: 1.6rem;
+    }
+
+    .rsvp-container p {
+        font-size: 1rem;
+    }
+
+    .rsvp-iframe {
+        height: 850px;
+    }
+
+    .edit-info {
+        padding: 0.8rem;
+    }
+
+    .edit-info p {
+        font-size: 0.9rem;
+    }
+
+    .form-input,
+    .form-textarea,
+    select {
+        padding: 0.6rem;
+        font-size: 0.95rem;
+    }
+
+    .submit-button {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.95rem;
     }
 }

@@ -255,59 +255,23 @@
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-    .how-we-met-container {
-        padding: 1rem;
-    }
-
-    .story-header h1 {
-        font-size: 3rem;
-    }
-
-    .timeline::before {
-        left: 30px;
-    }
-
-    .timeline-item {
-        flex-direction: column;
-        align-items: flex-start;
-        margin-left: 30px;
-    }
-
-    .timeline-content {
-        width: calc(100% - 80px);
-        margin-left: 0;
-        margin-top: 1rem;
-    }
-
-    .timeline-content::before {
-        display: none;
-    }
-
-    .love-quote p {
-        font-size: 1.5rem;
-    }
-}
-
 @media (max-width: 1100px) {
+    .timeline-content {
+        width: 100%;
+        max-width: 320px;
+    }
 
-    .timeline-content,
     .timeline-image {
         width: 100%;
-        max-width: 360px;
+        max-width: 320px;
+        height: 220px;
+        margin: 1rem 0;
     }
 
     .timeline-item.zigzag-left,
     .timeline-item.zigzag-right {
         flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .timeline-image {
-        margin: 1rem 0;
-        width: 100%;
-        max-width: 360px;
-        height: 220px;
+        align-items: center;
     }
 
     .timeline-content {
@@ -316,5 +280,100 @@
 
     .timeline-content::before {
         display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .how-we-met-container {
+        padding: 1rem;
+    }
+
+    .story-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 1.4rem;
+    }
+
+    .timeline::before {
+        display: none;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+    }
+
+    .timeline-icon {
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+        margin-bottom: 1rem;
+    }
+
+    .timeline-content {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .timeline-image {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        aspect-ratio: 1;
+        object-fit: cover;
+    }
+
+    .love-quote p {
+        font-size: 1.3rem;
+    }
+
+    .whats-next-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .whats-next-section p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .story-header h1 {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .timeline-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+
+    .timeline-content h3 {
+        font-size: 1.4rem;
+    }
+
+    .timeline-content p {
+        font-size: 0.95rem;
+    }
+
+    .fun-fact {
+        font-size: 0.9rem;
+        padding: 0.5rem 0.8rem;
+    }
+
+    .love-quote {
+        padding: 1rem;
+    }
+
+    .love-quote p {
+        font-size: 1.1rem;
     }
 }
