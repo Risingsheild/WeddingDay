@@ -36,7 +36,7 @@ export function Location() {
                                     <li>
                                         <a href="https://www.willowslodge.com/" target="_blank" rel="noopener noreferrer">
                                             Willows Lodge
-                                            <p>*Please contact us for more details we have a discounted group rate for the night of the wedding</p>
+                                            <p>*Please contact us for more details, we have a discounted group rate for the night of the wedding</p>
                                         </a>
                                     </li>
                                     <li>
@@ -64,7 +64,7 @@ export function Location() {
                         </div>
                     </div>
                     <div className="valet-note">
-                        <p>🚗 Don't worry about parking at Willows Lodge - we've got you covered with free valet!</p>
+                        <p>🚗 Don't worry about parking at Willows Lodge - we've got you covered with free valet! 🚗</p>
                     </div>
                 </motion.div>
             </div>

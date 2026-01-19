@@ -14,7 +14,7 @@ const timelineEvents = [
    {
     date: "First Trip",
     title: "Adventure Together",
-    description: "Our first big road trip where we explored the christmas lights in Leavenworth Washington.",
+    description: "Our first big road trip where we explored the Christmas lights in Leavenworth, Washington.",
     icon: "✈️",
     image: "/images/Bellingham.jpg",
     funFact: "We almost got stuck in the snow but the good food and beautiful lights were worth it!"
