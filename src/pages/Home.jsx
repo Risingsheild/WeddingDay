@@ -33,7 +33,8 @@ export function Home() {
             <li><span className="event-time">4:30<span className="time-period">pm</span></span> – Guest Arrival</li>
             <li><span className="event-time">5:00<span className="time-period">pm</span></span> – Ceremony </li>
             <li><span className="event-time">5:30<span className="time-period">pm</span></span> – Cocktail Hour</li>
-            <li><span className="event-time">6:30 - 11:00<span className="time-period">pm</span></span> – Reception</li>
+            <li><span className="event-time">6:30<span className="time-period">pm</span></span> – Reception</li>
+            <li><span className="event-time">11:00<span className="time-period">pm</span></span> – Send-off</li>
           </ul>
         </motion.div>
       </div>
