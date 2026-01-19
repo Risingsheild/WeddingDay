@@ -14,11 +14,11 @@ const faqData = [
       },
       {
         question: "What is the dress code?",
-        answer: "We're having a semi-formal celebration! Think cocktail attire or dressy casual. Ladies, feel free to wear florals or pastels that complement our mauve theme. Gentlemen, a nice suit or dress pants with a button-down shirt would be perfect."
+        answer: "We're having a semi-formal celebration! Think cocktail attire or dressy casual. Ladies, feel free to wear florals or pastels that complement our garden theme. Gentlemen, a nice suit or dress pants with a button-down shirt would be perfect."
       },
       {
         question: "Will the ceremony be indoors or outdoors?",
-        answer: "Our ceremony will be held outdoors in the beautiful gardens at Willows Lodge, weather permitting. In case of rain, we have a stunning indoor backup location at the same venue."
+        answer: "Our ceremony will be held outdoors in the beautiful gardens at Willows Lodge. In case of rain, we have a lovely covered area to ensure everyone stays dry while still enjoying the scenery."
       },
       {
         question: "How long will the celebration last?",
@@ -54,20 +54,16 @@ const faqData = [
     questions: [
       {
         question: "What type of food will be served?",
-        answer: "We're serving a plated dinner featuring Pacific Northwest cuisine with options for all dietary preferences. Our menu includes locally sourced salmon, herb-crusted chicken, and a delicious vegetarian option."
+        answer: "We're serving a plated dinner featuring Pacific Northwest cuisine with options for all dietary preferences. Our menu includes chicken, beef, steelhead and a vegan option."
       },
       {
         question: "Can you accommodate dietary restrictions?",
-        answer: "Absolutely! Please let us know about any dietary restrictions, allergies, or special meal requests when you RSVP. Our caterer can accommodate vegetarian, vegan, gluten-free, and other dietary needs."
+        answer: "Absolutely! Please let us know about any dietary restrictions, allergies, or special meal requests when you RSVP."
       },
       {
         question: "Will there be an open bar?",
-        answer: "Yes! We'll have a full open bar featuring signature cocktails, local wines, beer, and non-alcoholic beverages throughout the reception."
+        answer: "Yes! We'll have a full open bar featuring signature cocktails, local wines, beer, and non-alcoholic beverages throughout the cocktail hour and reception."
       },
-      {
-        question: "What are your signature cocktails?",
-        answer: "We're featuring 'Katie's Garden Spritz' (elderflower, prosecco, and fresh herbs) and 'Nick's Old Fashioned' (bourbon, mauve bitters, and orange). Plus a special lavender lemonade for non-alcohol drinkers!"
-      }
     ]
   },
   {
@@ -76,16 +72,8 @@ const faqData = [
     questions: [
       {
         question: "Do you have a wedding registry?",
-        answer: "Yes! We're registered at Williams Sonoma, Target, and have a cash fund for our honeymoon. You can find all the details on our registry page (coming soon!) or ask our families."
+        answer: "We have chosen not to create a registry. Your presence at our wedding is the greatest gift we could ask for! However, if you feel inclined to give, a contribution towards our honeymoon fund would be deeply appreciated."
       },
-      {
-        question: "Should I bring my gift to the wedding?",
-        answer: "While we appreciate your thoughtfulness, we recommend having gifts shipped directly to our home for security and convenience. If you do bring a card, there will be a beautifully decorated gift table at the reception."
-      },
-      {
-        question: "What if I can't make it to the wedding?",
-        answer: "We completely understand! Your presence is the greatest gift, but if you'd still like to send something, registry items can be shipped to our home address which will be provided with your RSVP confirmation."
-      }
     ]
   },
   {
@@ -103,17 +91,9 @@ const faqData = [
     ]
   },
   {
-    category: "Weather & Backup Plans",
+    category: "Weather Considerations",
     icon: "🌤️",
     questions: [
-      {
-        question: "What if it rains?",
-        answer: "April in Washington can be unpredictable, but don't worry! Willows Lodge has a beautiful awning space that will protect us."
-      },
-      {
-        question: "Should I bring a jacket?",
-        answer: "Yes! April evenings can be cool, so we recommend bringing a light jacket or wrap. Ladies, a cute pashmina or cardigan would be perfect!"
-      },
       {
         question: "What's the weather usually like in April?",
         answer: "April in Woodinville is usually mild with temperatures in the 60s°F during the day and 50s°F in the evening. There's a chance of light rain, so we recommend checking the forecast before traveling."
@@ -203,12 +183,12 @@ export function FAQ() {
             <div className="contact-person">
               <h4>🤵 Nick</h4>
               <a href="mailto:wellsnick3@gmail.com">wellsnick3@gmail.com</a>
-              <p>Best for: Logistics, travel, groomsmen questions</p>
+              <p>Best for: Logistics & travel</p>
             </div>
             <div className="contact-person">
               <h4>👰 Katie</h4>
               <a href="mailto:kmeehan0131@gmail.com">kmeehan0131@gmail.com</a>
-              <p>Best for: Details, attire, bridesmaids questions</p>
+              <p>Best for: Details & attire</p>
             </div>
           </div>
         </div>

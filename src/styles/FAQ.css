@@ -184,6 +184,7 @@
     height: 4px;
     background: linear-gradient(90deg, var(--mauve-200, #e6e0f7) 0%, var(--dusty-rose, #e7bfc7) 100%);
     border-radius: 20px 20px 0 0;
+    pointer-events: none;
 }
 
 .faq-contact h3 {
@@ -215,6 +216,7 @@
     border: 1px solid var(--mauve-200, #e6e0f7);
     box-shadow: 0 2px 8px 0 rgba(168, 85, 247, 0.06);
     transition: box-shadow 0.3s, border-color 0.3s;
+    position: relative;
 }
 
 .contact-person:hover {
@@ -239,6 +241,10 @@
     font-weight: 600;
     margin-bottom: 6px;
     transition: color 0.3s ease;
+    display: block;
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
 }
 
 .contact-person a:hover {
