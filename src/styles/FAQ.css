@@ -164,6 +164,19 @@
     position: relative;
 }
 
+.faq-link {
+    color: var(--mauve-600, #8d5fc7);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.faq-link:hover {
+    color: var(--deep-plum, #4b2354);
+    border-bottom-color: var(--deep-plum, #4b2354);
+}
+
 .faq-contact {
     background: var(--warm-white, #fdf8fa);
     border-radius: 20px;

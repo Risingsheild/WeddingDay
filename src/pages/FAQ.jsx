@@ -72,7 +72,7 @@ const faqData = [
     questions: [
       {
         question: "Do you have a wedding registry?",
-        answer: "We have chosen not to create a registry. Your presence at our wedding is the greatest gift we could ask for! However, if you feel inclined to give, a contribution towards our honeymoon fund would be deeply appreciated."
+        answer: <>Your presence at our wedding is the greatest gift we could ask for! However, if you feel inclined to give, a contribution towards our honeymoon fund would be deeply appreciated. <a href="https://www.honeyfund.com/site/wells-meehan-04-25-2026" target="_blank" rel="noopener noreferrer" className="faq-link">Visit our Honeyfund</a></>
       },
     ]
   },
